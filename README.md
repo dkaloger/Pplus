@@ -4,3 +4,4 @@ A FULLY PARELLISED FALLING SANDS SIMULATION IN UNITY WITH COMPUTE SHADERS AND HL
 THIS IS NOT COMPLETE !
 the project  draws  inspiration from this tutorial https://www.youtube.com/watch?v=ItPTBSeGjdM b
 feel free to submit or take code from the project 
+example of current abilities : https://streamable.com/o2sbrk
