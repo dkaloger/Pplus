@@ -1,0 +1,12 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(39): cannot convert from 'const float4' to 'class pixel'
+  api=4 insize=1521 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(17): syntax error: unexpected token '['
+  api=4 insize=1719 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(44): invalid subscript 'color'
+  api=4 insize=1616 outsize=0 ok=0
+Cmd: shutdown

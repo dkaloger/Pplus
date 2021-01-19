@@ -1,0 +1,80 @@
+﻿
+
+#pragma kernel GameOfLife
+
+float Width;
+float Height;
+
+int clock;
+int debug;
+
+
+Texture2D<float4> Input;
+RWTexture2D<float4> Result;
+RWTexture2D<float4> metadataResult;
+Texture2D<float4> metadatInput;
+//
+bool fourfcompare(float4 a, float4 b) {
+	if (a.r == b.r && a.g == b.g && a.b == b.b) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+void sandupdate(float3 id) {
+	
+	float4 black = float4(0, 0, 0, 0);
+	float2 down = float2(0, -1);
+	float2 up = float2(0, 1);
+	float2 right = float2(1, 0);
+	float2 downleft = float2(-1, -1);
+	float result;
+	//down
+	if (fourfcompare(Input[id.xy + down], black))
+	{
+		Result[id.xy] = black;
+		Result[id.xy + down] = Input[id.xy];
+	}
+	else if (!fourfcompare(Input[id.xy + down], black) && fourfcompare(Input[id.xy + right], black) && Input[id.xy + down].w == 0.2f)
+	{
+		Result[id.xy] = black;
+		Result[id.xy + right] = Input[id.xy];
+	}
+
+
+//	if (result == 3.0f) {
+	//	Result[id.xy] = black;
+//		Result[id.xy + downleft] = Input[id.xy];
+//	}
+}
+[numthreads(8,8,1)]
+void GameOfLife (uint3 id : SV_DispatchThreadID)
+{
+	float4 white = float4(1, 1, 1, 0);
+	float4 whiteImmovable = float4(2, 2, 2, 1);
+	float4 black = float4(0, 0, 0, 0);
+	float2 down = float2(0, -1);
+
+	if (id.y == 4) {
+		Result[id.xy] = float4(0.2f, 1, 0, 0.1f);
+	}
+
+
+	if (!fourfcompare(Input[id.xy], black))
+	{
+		if (Input[id.xy].w != 0.1f)
+		{
+			sandupdate(id);
+		}
+	
+
+	}
+
+
+	
+	
+	
+
+
+}

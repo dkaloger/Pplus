@@ -1,0 +1,18 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(14): syntax error: unexpected token 'RWTexture2D'
+  api=4 insize=1528 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(38): cannot convert from 'float4' to 'class pixel'
+  api=4 insize=1506 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(18): elements of typed buffers and textures must fit in four 32-bit quantities
+  api=4 insize=1625 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(27): syntax error: unexpected token ';'
+  api=4 insize=1674 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(24): unrecognized identifier 'by'
+  api=4 insize=1721 outsize=0 ok=0
+Cmd: shutdown
