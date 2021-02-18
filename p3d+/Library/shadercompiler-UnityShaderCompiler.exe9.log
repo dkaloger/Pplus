@@ -1,6 +1,12 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(17): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1602 outsize=0 ok=0
-Cmd: shutdown
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(195): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4910 outsize=5259 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5170 outsize=4002 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5146 outsize=3962 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5154 outsize=4043 ok=1

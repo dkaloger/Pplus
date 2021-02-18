@@ -1,27 +1,8 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(13): syntax error: unexpected token '}'
-  api=4 insize=1535 outsize=0 ok=0
+  api=4 insize=4445 outsize=3899 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(49): 'fourfcompare': cannot implicitly convert from 'const float3' to 'float4'
-  api=4 insize=1659 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(49): 'fourfcompare': cannot implicitly convert from 'const float3' to 'float4'
-  api=4 insize=1661 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(26): array, matrix, vector, or indexable object type expected in index expression
-  api=4 insize=1701 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(28): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1673 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(50): invalid subscript 'color'
-  api=4 insize=1672 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(50): invalid subscript 'color'
-  api=4 insize=1672 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(50): invalid subscript 'color'
-  api=4 insize=1672 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5221 outsize=4127 ok=1
 Cmd: shutdown

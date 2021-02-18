@@ -1,15 +1,12 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(38): cannot convert from 'float4' to 'class pixel'
-  api=4 insize=1513 outsize=0 ok=0
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(182): if statement conditional expressions must evaluate to a scalar
+  api=4 insize=4454 outsize=0 ok=0
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(50): invalid subscript 'color'
-  api=4 insize=1672 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5172 outsize=5195 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(50): invalid subscript 'color'
-  api=4 insize=1677 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(24): unrecognized identifier 'byte4'
-  api=4 insize=1661 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5288 outsize=5315 ok=1
 Cmd: shutdown

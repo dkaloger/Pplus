@@ -1,12 +1,14 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(39): cannot convert from 'const float4' to 'class pixel'
-  api=4 insize=1521 outsize=0 ok=0
+  api=4 insize=4466 outsize=3883 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(17): syntax error: unexpected token '['
-  api=4 insize=1719 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(194): signed/unsigned mismatch, unsigned assumed
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(213): syntax error: unexpected token 'if'
+  api=4 insize=4886 outsize=0 ok=0
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(44): invalid subscript 'color'
-  api=4 insize=1616 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(200): 'fourfcompare': no matching 2 parameter function
+  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(200): undeclared identifier 'black'
+  api=4 insize=5132 outsize=0 ok=0
 Cmd: shutdown

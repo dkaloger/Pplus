@@ -1,15 +1,17 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(10): syntax error: unexpected token '('
-  api=4 insize=1532 outsize=0 ok=0
+  api=4 insize=4445 outsize=3899 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(28): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1673 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(195): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4906 outsize=5231 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(50): invalid subscript 'color'
-  api=4 insize=1672 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(205): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5018 outsize=5259 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(49): invalid subscript 'color'
-  api=4 insize=1660 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5136 outsize=5259 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5189 outsize=5259 ok=1
 Cmd: shutdown

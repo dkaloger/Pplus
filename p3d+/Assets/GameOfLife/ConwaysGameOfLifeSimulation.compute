@@ -12,7 +12,8 @@ int debug;
 Texture2D<float4> Input;
 RWTexture2D<float4> Result;
 RWTexture2D<float4> metadataResult;
-Texture2D<float4> metadatInput;
+Texture2D<float4> metadataInput;
+
 //
 bool fourfcompare(float4 a, float4 b) {
 	if (a.r == b.r && a.g == b.g && a.b == b.b) {
@@ -22,7 +23,49 @@ bool fourfcompare(float4 a, float4 b) {
 		return false;
 	}
 }
-void sandupdate(float3 id) {
+bool canfall(float3 id )
+{
+    float4 black = float4(0, 0, 0, 0);
+    float2 down = float2(0, -1);
+    //&& metadataInput[id.xy + down].r == 0)
+    if (fourfcompare(Input[id.xy + down], black))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool doiexist(float3 id)
+{
+    float4 black = float4(0, 0, 0, 0);
+ 
+
+    if (!fourfcompare(Result[id.xy], black))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool Result_canfall(float3 id)
+{
+    float4 black = float4(0, 0, 0, 0);
+    float2 down = float2(0, -1);
+    //&& metadataInput[id.xy + down].r == 0)
+    if (fourfcompare(Result[id.xy + down], black) && id.y + down.y !=0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+    void sandupdate(float3 id) {
 	
 	float4 black = float4(0, 0, 0, 0);
 	float2 down = float2(0, -1);
@@ -30,17 +73,45 @@ void sandupdate(float3 id) {
 	float2 right = float2(1, 0);
 	float2 downleft = float2(-1, -1);
 	float result;
+
+	//is solid
+  //  metadataResult[id.xy] = metadataInput[id.xy] + float4(0, 1, 0, 0);
+    if (metadataInput[id.xy + down].r != 0 && metadataInput[id.xy ].r == 0)
+    {
+        metadataResult[id.xy] = metadataInput[id.xy] + float4(0.2f, 0, 0, 0);
+
+    }
+    if (metadataInput[id.xy + down].r == 0 && metadataInput[id.xy].r != 0)
+    {
+        metadataResult[id.xy] =  float4(0, 0, 0, 0);
+    }
 	//down
-	if (fourfcompare(Input[id.xy + down], black))
+    if (canfall(id) == true)
 	{
 		Result[id.xy] = black;
+        metadataResult[id.xy] = black;
 		Result[id.xy + down] = Input[id.xy];
+		
 	}
-	else if (!fourfcompare(Input[id.xy + down], black) && fourfcompare(Input[id.xy + right], black) && Input[id.xy + down].w == 0.2f)
-	{
-		Result[id.xy] = black;
-		Result[id.xy + right] = Input[id.xy];
-	}
+	//add down race check
+		//slide
+    else if (fourfcompare(Input[id.xy + right], black) && fourfcompare(metadataInput[id.xy + right], black) && metadataInput[id.xy].r == 0.2f && fourfcompare(Input[id.xy + float2(1, 1)], black) && metadataInput[id.xy + float2(1, -1)].r != 0.0f )
+    {
+        Result[id.xy + right] = Input[id.xy];
+        Result[id.xy] = black;
+        metadataResult[id.xy] = black;
+
+    }
+
+    if (metadataInput[id.xy + down].r != 0 && metadataInput[id.xy].r == 0)
+    {
+        metadataResult[id.xy] = metadataInput[id.xy] + float4(0.2f, 0, 0, 0);
+
+    }
+    if (metadataInput[id.xy + down].r == 0 && metadataInput[id.xy].r != 0)
+    {
+        metadataResult[id.xy] = float4(0, 0, 0, 0);
+    }
 
 
 //	if (result == 3.0f) {
@@ -48,33 +119,185 @@ void sandupdate(float3 id) {
 //		Result[id.xy + downleft] = Input[id.xy];
 //	}
 }
-[numthreads(8,8,1)]
-void GameOfLife (uint3 id : SV_DispatchThreadID)
+void move(uint3 from, uint3 to)
 {
-	float4 white = float4(1, 1, 1, 0);
-	float4 whiteImmovable = float4(2, 2, 2, 1);
-	float4 black = float4(0, 0, 0, 0);
-	float2 down = float2(0, -1);
-
-	if (id.y == 4) {
-		Result[id.xy] = float4(0.2f, 1, 0, 0.1f);
-	}
-
-
-	if (!fourfcompare(Input[id.xy], black))
-	{
-		if (Input[id.xy].w != 0.1f)
-		{
-			sandupdate(id);
-		}
-	
-
-	}
-
-
-	
-	
-	
+    float4 black = float4(0, 0, 0, 0);
+    if (!fourfcompare(Input[from.xy], black))
+    {
+        Result[to.xy] = Input[from.xy];
+     Result[from.xy] = black;
+    }
 
 
 }
+void gravity(uint3 id)
+{
+    float y;
+    if (id.y == 1)
+    {
+    //sliding
+        for (int yi = 0; yi < Height; yi++)
+        {
+    
+            y++;
+            if (doiexist(uint3(id.x, y, 0)))
+            {
+                if (Result_canfall(uint3(id.x, y, 0)))
+                {
+          
+                    move(uint3(id.x, y, 0), uint3(id.x, y - 1, 0));
+            
+                  
+                }
+            }
+        }
+        
+    }
+}
+void leftslide(uint3 id)
+{
+    float x;
+    if (id.x == 1 && id.y % 2 == 1)
+    {
+        for (int xi = 0; xi < Width; xi++)
+        {
+            x++;
+                //if (doiexist(uint3(x, id.y, 0)) && !doiexist(uint3(x - 1, id.y - 1, 0)) && metadataResult[uint2(x, id.y)].r == 0.2f)
+          
+            if (doiexist(uint3(x, id.y, 0)) && !doiexist(uint3(x - 1, id.y, 0)) && metadataResult[uint2(x, id.y)].r == 0.2f && doiexist(uint3(x, id.y + 1, 0)))
+            {
+            
+                  //  move(uint3(x, id.y, 0), uint3(x - 1, id.y - 1, 0));
+                move(uint3(x, id.y, 0), uint3(x - 1, id.y, 0));
+           
+            }
+        }
+    }
+}
+void rightslide(uint3 id)
+{
+    float x;
+    if (id.x == Width - 1 && id.y % 2 == 0)
+    {
+        x = Width - 1;
+       
+        while (x > 0)
+        {
+            
+            x--;
+        //    move(uint3(x, id.y, 0), uint3(x + 1, id.y, 0));
+                //if (doiexist(uint3(x, id.y, 0)) && !doiexist(uint3(x - 1, id.y - 1, 0)) && metadataResult[uint2(x, id.y)].r == 0.2f)
+          
+            if (doiexist(uint3(x, id.y, 0)) && !doiexist(uint3(x + 1, id.y, 0)) && metadataResult[uint2(x, id.y)].r == 0.2f && doiexist(uint3(x, id.y + 1, 0)))
+            {
+            
+                  //  move(uint3(x, id.y, 0), uint3(x - 1, id.y - 1, 0));
+                move(uint3(x, id.y, 0), uint3(x + 1, id.y, 0));
+           
+            }
+        }
+    }
+}
+void transfermtometadata(uint3 id)
+{
+    float4 black = float4(0, 0, 0, 0);
+    if (doiexist(id) && fourfcompare(metadataResult[id.xy], black))
+    {
+        metadataResult[id.xy] = metadataResult[id.xy] + float4(0.1f, 0, 0, 0);
+            
+    }
+    if (!doiexist(id) && !fourfcompare(metadataResult[id.xy], black))
+    {
+        metadataResult[id.xy] = float4(0, 0, 0, 0);
+            
+    }
+}
+void groundcheck(uint3 id)
+{
+    if (doiexist(id))
+    {
+         //   for (int yii = 0; yii < id.y; yii--)
+         //   {
+                
+         //   }
+        int yii;
+        yii = id.y;
+        while (yii != 0)
+        {
+            yii--;
+            if (metadataResult[uint2(id.x, yii)].r == 0.2f)
+            {
+                metadataResult[id.xy] = float4(0.2f, 0, 0, 0);
+                break;
+
+            }
+                
+            if (metadataResult[uint2(id.x, yii)].r == 0.0f)
+            {
+                break;
+            }
+                  
+                
+        }
+    }
+}
+void slide_dir(uint3 id)
+{
+    if (id.y % 2 == 0)
+    {
+      //  metadataResult[id.xy] = float()
+
+    }
+}
+[numthreads(8,8,1)]
+void GameOfLife (uint3 id : SV_DispatchThreadID)
+{
+    float4 black = float4(0, 0, 0, 0);
+    float2 down = float2(0, -1);
+    float2 up = float2(0, 1);
+    float2 right = float2(1, 0);
+    float2 downleft = float2(-1, -1);
+   
+  
+    
+    
+    float ym;
+    float xm;
+   // sandupdate(id);
+   // uint path=; //1 = down ,2 = right
+if (id.y == 1)
+{
+        metadataResult[id.xy] = float4(0.2f, 0, 0, 0);
+        
+}
+if (id.x != 1 ||id.y != 1)
+{
+        
+    
+        gravity(id);
+        leftslide(id);
+        rightslide(id);
+        
+        
+
+}
+if (id.x != 1 && id.y != 1)
+{
+        transfermtometadata(id);
+        groundcheck(id);
+
+}
+   
+  
+}
+       //     move(float3(id.x, y, 0), float3(0, 0, 0));
+      //      y=0;
+
+        
+
+    
+   
+        
+   
+
+

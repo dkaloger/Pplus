@@ -1,13 +1,9 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(26): undeclared identifier 'BitConverter'
-  api=4 insize=1722 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5173 outsize=5259 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(29): syntax error: unexpected token ';'
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(34): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1726 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(28): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1672 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5138 outsize=5259 ok=1
 Cmd: shutdown

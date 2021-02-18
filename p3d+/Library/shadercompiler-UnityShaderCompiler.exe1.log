@@ -1,6 +1,7 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(66): invalid subscript 'color'
-  api=4 insize=1497 outsize=0 ok=0
+  api=4 insize=4393 outsize=2870 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5144 outsize=3962 ok=1
 Cmd: shutdown

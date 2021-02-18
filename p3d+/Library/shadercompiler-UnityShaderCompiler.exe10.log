@@ -1,12 +1,9 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(27): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1660 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(200): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4958 outsize=5259 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(17): 'bytes::bits': array dimensions of struct/class members must be explicit
-  api=4 insize=1719 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(28): elements of typed buffers and textures must fit in four 32-bit quantities
-  api=4 insize=1677 outsize=0 ok=0
+  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(180): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5213 outsize=4103 ok=1
 Cmd: shutdown

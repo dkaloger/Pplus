@@ -11,10 +11,13 @@ public class ConwaysGameOfLife : MonoBehaviour
 
     public ComputeShader compute;
     public RenderTexture Input;
-   
     public RenderTexture Output;
 
-    public Material material;
+    public RenderTexture metaInput;
+    public RenderTexture metaOutput;
+
+    public Material material ;
+    public Material debug;
 
     private int kernel;
     private bool pingPong;
@@ -33,14 +36,8 @@ public class ConwaysGameOfLife : MonoBehaviour
     // Use this for initialization
 
 
-
-    void Start () {
-         count_x = width;
-        count_y = height;
-     
-
-        kernel = compute.FindKernel("GameOfLife");
-
+    RenderTexture Makert(RenderTexture Input)
+    {
         Input = new RenderTexture(width, height, 24);
         Input.name = "Input";
         Input.wrapMode = TextureWrapMode.Repeat;
@@ -49,15 +46,39 @@ public class ConwaysGameOfLife : MonoBehaviour
         Input.useMipMap = false;
         Input.Create();
 
-        Output = new RenderTexture(width, height, 24);
-        Output.name = "Output";
-        Output.wrapMode = TextureWrapMode.Repeat;
-        Output.enableRandomWrite = true;
-        Output.filterMode = FilterMode.Point;
-        Output.useMipMap = false;
-        Output.Create();
+        return Input;
+    }
+    Texture2D transferRt( RenderTexture target)
+    {
+        UnityEngine.Object.Destroy(texture);
+        texture = new Texture2D(count_x, count_y, TextureFormat.RGB24, false);
 
-    
+        Rect rectReadPicture = new Rect(0, 0, count_x, count_y);
+
+        RenderTexture.active = target;
+
+        // Read pixels
+        texture.ReadPixels(rectReadPicture, 0, 0);
+        texture.Apply();
+
+        RenderTexture.active = null; // added to avoid errors 
+
+        return texture;
+    }
+    void Start () {
+   
+   width = input.width;
+     height = input.height;
+        count_x = width;
+        count_y = height;
+       
+           kernel = compute.FindKernel("GameOfLife");
+
+        Input= Makert(Input);
+        Output= Makert(Output);
+        metaOutput = Makert(metaOutput);
+        metaInput = Makert(metaInput);
+
 
         pingPong = true;
 
@@ -71,36 +92,32 @@ public class ConwaysGameOfLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+     
         if (!done)
         {
 
 
 
             compute.SetTexture(kernel, "Input", Input);
-
             compute.SetTexture(kernel, "Result", Output);
+
+            compute.SetTexture(kernel, "metadataInput", metaInput);
+            compute.SetTexture(kernel, "metadataResult", metaOutput);
+          
             compute.Dispatch(kernel, width / 1, height / 1, 1);
 
             material.mainTexture = Output;
+            debug.mainTexture = metaOutput;
 
-            texture = new Texture2D(count_x, count_y, TextureFormat.RGB24, false);
-
-            Rect rectReadPicture = new Rect(0, 0, count_x, count_y);
-
-            RenderTexture.active = Output;
-
-            // Read pixels
-            texture.ReadPixels(rectReadPicture, 0, 0);
-            texture.Apply();
-
-            RenderTexture.active = null; // added to avoid errors 
-
-            Graphics.Blit(texture, Input);
-            current[t] = (1f / Time.unscaledDeltaTime);
+        //    current[t] = (1f / Time.unscaledDeltaTime);
             t++;
+            Graphics.Blit(transferRt(Output), Input);
+            Graphics.Blit(transferRt(metaOutput), metaInput);
+  
         }
 
+
+        //fps calc
         if (done)
         {
             if(average == 0)
