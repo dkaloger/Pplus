@@ -131,4 +131,7 @@ public class ConwaysGameOfLife : MonoBehaviour
           
         }
     }
+    private void LateUpdate() {
+        
+    }
 }

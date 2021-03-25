@@ -32,6 +32,7 @@ bool canfall(float3 id )
     {
         return true;
     }
+
     else
     {
         return false;
@@ -249,6 +250,13 @@ void slide_dir(uint3 id)
 
     }
 }
+
+//struct cube {
+    //float3 potition ;
+    //float4 color ;
+
+//}
+
 [numthreads(8,8,1)]
 void GameOfLife (uint3 id : SV_DispatchThreadID)
 {
@@ -275,8 +283,8 @@ if (id.x != 1 ||id.y != 1)
         
     
         gravity(id);
-        leftslide(id);
-        rightslide(id);
+   //     leftslide(id);
+     //   rightslide(id);
         
         
 
@@ -289,6 +297,7 @@ if (id.x != 1 && id.y != 1)
 }
    
   
+
 }
        //     move(float3(id.x, y, 0), float3(0, 0, 0));
       //      y=0;
