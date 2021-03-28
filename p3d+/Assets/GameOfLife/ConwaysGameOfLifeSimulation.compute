@@ -8,11 +8,13 @@ float Height;
 int clock;
 int debug;
 
-
 Texture2D<float4> Input;
 RWTexture2D<float4> Result;
+
 RWTexture2D<float4> metadataResult;
 Texture2D<float4> metadataInput;
+
+
 
 //
 bool fourfcompare(float4 a, float4 b) {
@@ -77,7 +79,9 @@ bool Result_canfall(float3 id)
 
 	//is solid
   //  metadataResult[id.xy] = metadataInput[id.xy] + float4(0, 1, 0, 0);
+  metadataResult[id.xy].x = 1;
     if (metadataInput[id.xy + down].r != 0 && metadataInput[id.xy ].r == 0)
+
     {
         metadataResult[id.xy] = metadataInput[id.xy] + float4(0.2f, 0, 0, 0);
 
@@ -134,6 +138,7 @@ void move(uint3 from, uint3 to)
 void gravity(uint3 id)
 {
     float y;
+    float tot;
     if (id.y == 1)
     {
     //sliding
@@ -147,18 +152,22 @@ void gravity(uint3 id)
                 {
           
                     move(uint3(id.x, y, 0), uint3(id.x, y - 1, 0));
-            
+           
                   
                 }
+            
             }
         }
+           //  metadataResult[]
         
     }
 }
 void leftslide(uint3 id)
 {
     float x;
-    if (id.x == 1 && id.y % 2 == 1)
+
+ //   if (id.x == 1 && id.y % 2 == 1)
+   if (id.x == 1 && id.y % 2 == 1)
     {
         for (int xi = 0; xi < Width; xi++)
         {
@@ -178,8 +187,9 @@ void leftslide(uint3 id)
 void rightslide(uint3 id)
 {
     float x;
-    if (id.x == Width - 1 && id.y % 2 == 0)
-    {
+  //  if (id.x == Width - 1 && id.y % 2 == 0)
+     if (id.x == Width - 1 && id.y % 2 == 0)
+     {
         x = Width - 1;
        
         while (x > 0)
@@ -251,57 +261,158 @@ void slide_dir(uint3 id)
     }
 }
 
-//struct cube {
-    //float3 potition ;
-    //float4 color ;
+/*struct force {
 
-//}
+float2 ammount ;
+float2 direction ;
+
+
+
+};
+
+force add (force a ,force b ){
+force output;
+
+if(a.direction.x == b.direction.x && a.direction.y == b.direction.y ){
+output.direction =  a.direction +b.direction ;
+}
+
+//output.direction =float2() a.direction.x + 
+
+
+
+
+return output;
+}
+
+
+
+class object {
+
+
+force forces[10];
+int acl;
+force final;
+force combine(){
+    force output; 
+   
+for (int i = 0; i < acl; i++)
+{
+    for (int i = 0; i < acl; i++)
+    {
+
+    if(forces[i].ammount == -1 * forces[1].ammount){
+  //  output =  output + forces[i];
+    }
+
+
+ 
+}
+return output;
+}; */
+  float random (float2 uv)
+            {
+                return frac(sin(dot(uv,float2(12.9898,78.233)))*43758.5453123);
+            }
+
+void lftslidenew(uint3 id){
+      float x;
+  //  if (id.x == Width - 1 && id.y % 2 == 0)
+     if (id.x == Width - 1 && id.y % 2 == 0)
+     {
+        x = Width - 1;
+       
+        while (x > 0)
+        {
+            
+            x--;
+        //    move(uint3(x, id.y, 0), uint3(x + 1, id.y, 0));
+                //if (doiexist(uint3(x, id.y, 0)) && !doiexist(uint3(x - 1, id.y - 1, 0)) && metadataResult[uint2(x, id.y)].r == 0.2f)
+          
+            if (doiexist(uint3(x, id.y, 0)) && !doiexist(uint3(x + 1, id.y, 0)) && metadataResult[uint2(x, id.y)].r == 0.2f && doiexist(uint3(x, id.y + 1, 0)))
+            {
+            
+                  //  move(uint3(x, id.y, 0), uint3(x - 1, id.y - 1, 0));
+                move(uint3(x, id.y, 0), uint3(x + 1, id.y, 0));
+           
+            }
+        }
+    }
+ //   if(metadataInput[id.xy].x == 0.2f&&metadataInput[id.xy - uint2(1,0)].x == 0.2f ){
+  //move(id, id - uint3(1,0,0));
+  //  }
+
+}
+
 
 [numthreads(8,8,1)]
 void GameOfLife (uint3 id : SV_DispatchThreadID)
 {
-    float4 black = float4(0, 0, 0, 0);
-    float2 down = float2(0, -1);
-    float2 up = float2(0, 1);
+
+         // object f ;
+     float4 black = float4(0, 0, 0, 0);
+      float4 white = float4(1, 1, 1, 0);
+      float2 down = float2(0, -1);
+      float2 up = float2(0, 1);
     float2 right = float2(1, 0);
-    float2 downleft = float2(-1, -1);
+        float2 downleft = float2(-1, -1);
    
   
     
     
-    float ym;
-    float xm;
-   // sandupdate(id);
-   // uint path=; //1 = down ,2 = right
-if (id.y == 1)
-{
+        float ym;
+      float xm;
+     float2 result = float2(0,0);
+
+
+
+if(id.x == 100 && id.y == 100){
+  
+  Result[id.xy] = white;
+}
+
+
+    if (id.y == 1  )
+    {
+        
         metadataResult[id.xy] = float4(0.2f, 0, 0, 0);
         
-}
-if (id.x != 1 ||id.y != 1)
-{
-        
-    
-        gravity(id);
-   //     leftslide(id);
-     //   rightslide(id);
-        
-        
+    }
 
-}
-if (id.x != 1 && id.y != 1)
-{
-        transfermtometadata(id);
-        groundcheck(id);
-
-}
+    if (id.x != 1 ||id.y != 1)
+    {
+        
+    // leftslide(id);
+   //     lftslidenew(id);
+    gravity(id);
    
-  
+ 
+    if(random(id.xy) > 0.5f)
+    {
+    leftslide(id);
+    }
+     if(random(id.xy) < 0.5f)
+    {
+         rightslide(id);
+    }
+ // rightslide(id);
 
+    }
+      
+        
+        
+
+    
+    if (id.x != 1 && id.y != 1)
+    {   
+       transfermtometadata(id);
+       groundcheck(id);
+
+    }
+   
 }
-       //     move(float3(id.x, y, 0), float3(0, 0, 0));
-      //      y=0;
 
+ 
         
 
     

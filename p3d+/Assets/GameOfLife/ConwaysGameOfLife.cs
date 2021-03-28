@@ -93,8 +93,7 @@ public class ConwaysGameOfLife : MonoBehaviour
     void Update()
     {
      
-        if (!done)
-        {
+      
 
 
 
@@ -117,20 +116,7 @@ public class ConwaysGameOfLife : MonoBehaviour
         }
 
 
-        //fps calc
-        if (done)
-        {
-            if(average == 0)
-            {
-                for (var i = 0; i < current.Length; i++)
-                {
-                    sum += current[i];
-                }
-                average = sum / current.Length;
-            }
-          
-        }
-    }
+   
     private void LateUpdate() {
         
     }
