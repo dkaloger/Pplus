@@ -1,30 +1,14 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5535 outsize=2225 ok=1
+  api=4 insize=3267 outsize=7643 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5379 outsize=2874 ok=1
+  api=4 insize=3280 outsize=7679 ok=1
 Cmd: compileComputeKernel
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(161): syntax error: unexpected token ']'
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(172): undeclared identifier 'x'
-  api=4 insize=5430 outsize=0 ok=0
+  api=4 insize=3257 outsize=7575 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(188): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(316): 'move': no matching 0 parameter function
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(316): syntax error: unexpected token ')'
-  api=4 insize=5580 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5739 outsize=3450 ok=1
-Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5812 outsize=3423 ok=1
-Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6062 outsize=4123 ok=1
+  error: 1 plat 4 at D3Cg.compute(174): Literal floating-point value out of unsigned range for conversion: -1.000000
+  api=4 insize=3405 outsize=7639 ok=1
 Cmd: shutdown
 
 Quitting shader compiler process

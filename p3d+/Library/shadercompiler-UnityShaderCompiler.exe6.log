@@ -1,18 +1,17 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5565 outsize=2261 ok=1
+  api=4 insize=3294 outsize=7739 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(338): if statement conditional expressions must evaluate to a scalar
-  api=4 insize=5593 outsize=0 ok=0
+  api=4 insize=3269 outsize=7595 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(188): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5640 outsize=4251 ok=1
+  api=4 insize=3232 outsize=7547 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5702 outsize=3170 ok=1
+  api=4 insize=3431 outsize=7775 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5200 outsize=11383 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5323 outsize=12739 ok=1
 Cmd: shutdown
 
 Quitting shader compiler process

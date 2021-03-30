@@ -1,22 +1,25 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5509 outsize=2144 ok=1
+  api=4 insize=3212 outsize=7411 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5621 outsize=2373 ok=1
+  api=4 insize=3268 outsize=7595 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(389): syntax error: unexpected end of file
-  api=4 insize=5696 outsize=0 ok=0
+  error: 2 plat 4 at D3Cg.compute(162): if statement conditional expressions must evaluate to a scalar
+  api=4 insize=3351 outsize=0 ok=0
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5681 outsize=2874 ok=1
+  error: 2 plat 4 at D3Cg.compute(162): if statement conditional expressions must evaluate to a scalar
+  api=4 insize=3476 outsize=0 ok=0
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6164 outsize=5423 ok=1
+  api=4 insize=3409 outsize=7759 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3410 outsize=7783 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3410 outsize=7783 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3460 outsize=7803 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3540 outsize=8131 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5196 outsize=12131 ok=1
 Cmd: shutdown
-
-Quitting shader compiler process

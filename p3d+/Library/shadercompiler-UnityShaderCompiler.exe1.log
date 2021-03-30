@@ -1,18 +1,13 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5506 outsize=2048 ok=1
+  api=4 insize=3293 outsize=7575 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(398): syntax error: unexpected end of file
-  api=4 insize=5688 outsize=0 ok=0
+  api=4 insize=3280 outsize=7659 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(319): invalid type for index - index must be a scalar, or a vector with the correct number of dimensions
-  api=4 insize=5747 outsize=0 ok=0
+  api=4 insize=3280 outsize=7659 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6138 outsize=4123 ok=1
+  api=4 insize=3280 outsize=7595 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4064 outsize=9619 ok=1
 Cmd: shutdown

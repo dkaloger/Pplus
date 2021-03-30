@@ -15,11 +15,11 @@ C:/Code/projects/p+/p3d+
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63358
+52411
 Successfully changed project path to: C:/Code/projects/p+/p3d+
 C:/Code/projects/p+/p3d+
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 37.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 33.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.0a9 (18321e85013a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/Resources/UnitySubsystems
@@ -35,1350 +35,295 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002492 seconds.
+Registered in 0.002569 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 28.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 31.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.172 seconds
+- Completed reload, in  1.330 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001674 seconds.
+Registered in 0.001642 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.129 seconds
+- Completed reload, in  0.985 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1266 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.2 MB.
-System memory in use after: 197.2 MB.
+Unloading 1377 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.0 MB.
+System memory in use after: 202.1 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1716.
-Total: 2.061600 ms (FindLiveObjects: 0.145900 ms CreateObjectMapping: 0.032800 ms MarkObjects: 1.792700 ms  DeleteObjects: 0.089200 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1832.
+Total: 1.897100 ms (FindLiveObjects: 0.153200 ms CreateObjectMapping: 0.036300 ms MarkObjects: 1.626500 ms  DeleteObjects: 0.080200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/GameOfLife/ConwaysGameOfLife.cs
-  artifactKey: Guid(ee99609ba72cdce46b989f9596a96a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLife.cs using Guid(ee99609ba72cdce46b989f9596a96a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1568aa34314060d320c7707f5458919') in 0.032368 seconds 
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25184a5b01fcd72e46e3dc5954d6885b') in 0.030672 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.014714 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515f1fd6683ad9617000f3056f08c411') in 0.020086 seconds 
+  Time since last request: 896.280987 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c865333b610b4c0d849e1e9daddca8d') in 0.003997 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 41.185985 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ba04b0cd6662ef043d0e2e48ef7bd2') in 0.009937 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001826 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.913 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.0 MB.
-System memory in use after: 196.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1718.
-Total: 4.738400 ms (FindLiveObjects: 0.261100 ms CreateObjectMapping: 0.063500 ms MarkObjects: 4.326700 ms  DeleteObjects: 0.084900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001757 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.867 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.2 MB.
-System memory in use after: 196.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1720.
-Total: 1.734800 ms (FindLiveObjects: 0.131500 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.523800 ms  DeleteObjects: 0.048500 ms)
-
+  Time since last request: 15.372417 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '362f0af81cd1debd1eafc82bd4cb2391') in 0.004363 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 55.713106 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8fcd3a3896915f3743c8d3ebe41b75') in 0.016009 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001779 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.860 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.8 MB.
-System memory in use after: 196.9 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1722.
-Total: 1.717000 ms (FindLiveObjects: 0.154400 ms CreateObjectMapping: 0.039100 ms MarkObjects: 1.473100 ms  DeleteObjects: 0.049300 ms)
-
+  Time since last request: 98.224467 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '471035fe255d71225b28091d4183d424') in 0.003889 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.632132 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f531e5cb4a8c3f52798e920abcd89668') in 0.014310 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001710 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.857 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.2 MB.
-System memory in use after: 197.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1724.
-Total: 1.791400 ms (FindLiveObjects: 0.128100 ms CreateObjectMapping: 0.030800 ms MarkObjects: 1.575100 ms  DeleteObjects: 0.056600 ms)
-
+  Time since last request: 63.726252 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '035f3b806e15e6265433149d0415d267') in 0.003758 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.161951 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c7f284593c1136161ca9c215243e53') in 0.018586 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001743 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.849 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.7 MB.
-System memory in use after: 196.7 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1726.
-Total: 1.681000 ms (FindLiveObjects: 0.126600 ms CreateObjectMapping: 0.030500 ms MarkObjects: 1.472700 ms  DeleteObjects: 0.050300 ms)
-
+  Time since last request: 407.303401 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47421df89d4e1cf5948d7eb43b943fd2') in 0.004919 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 45.111575 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63484b76beb43f53826be079e00d7d33') in 0.013281 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001730 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.1 MB.
-System memory in use after: 197.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1728.
-Total: 1.665200 ms (FindLiveObjects: 0.126300 ms CreateObjectMapping: 0.030400 ms MarkObjects: 1.453800 ms  DeleteObjects: 0.053900 ms)
-
+  Time since last request: 33.895421 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e3a527f1a067f5f9daf4f5696ce4718') in 0.004467 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 87.569369 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a282aaa87ce7976a597f2cd5836c6f') in 0.014335 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001960 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.839 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1730.
-Total: 1.813600 ms (FindLiveObjects: 0.141900 ms CreateObjectMapping: 0.032200 ms MarkObjects: 1.582900 ms  DeleteObjects: 0.055700 ms)
-
+  Time since last request: 175.675484 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34567566c1df0574d000462b3255f877') in 0.003929 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 67.098919 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a12b201961bf1ccc3bb47eec29e762c') in 0.013508 seconds 
+  Time since last request: 25.363792 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a288184b0b95f7c7198fd9f71a2c41b3') in 0.003829 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 28.228338 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e36b79a042e77dbe7f319e2fc401b83a') in 0.005724 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001825 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.848 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.9 MB.
-System memory in use after: 197.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1732.
-Total: 1.824200 ms (FindLiveObjects: 0.127200 ms CreateObjectMapping: 0.054200 ms MarkObjects: 1.581900 ms  DeleteObjects: 0.059900 ms)
-
+  Time since last request: 233.410731 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab7bd9f1935c4a30ada3ffe98cc4a486') in 0.003826 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 45.375192 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32cb038813d10ec9a32bdeb327bf42eb') in 0.014327 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001853 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.846 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1734.
-Total: 1.927000 ms (FindLiveObjects: 0.166900 ms CreateObjectMapping: 0.033800 ms MarkObjects: 1.659100 ms  DeleteObjects: 0.065800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001779 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.7 MB.
-System memory in use after: 196.8 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1736.
-Total: 1.841700 ms (FindLiveObjects: 0.136200 ms CreateObjectMapping: 0.032100 ms MarkObjects: 1.614600 ms  DeleteObjects: 0.057800 ms)
-
+  Time since last request: 73.452338 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a45f7f1a60d426c811224fb8655081df') in 0.003938 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 62.023479 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.010408 seconds  code(4) message(Build asset version error: assets/gameoflife/conwaysgameoflifesimulation.compute in SourceAssetDB has modification time of '2021-03-28T10:00:37.8175172Z' while content on disk has modification time of '2021-03-28T10:00:41.1575209Z')
-  ERROR: Build asset version error: assets/gameoflife/conwaysgameoflifesimulation.compute in SourceAssetDB has modification time of '2021-03-28T10:00:37.8175172Z' while content on disk has modification time of '2021-03-28T10:00:41.1575209Z'
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001989 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.882 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.1 MB.
-System memory in use after: 197.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1738.
-Total: 1.745400 ms (FindLiveObjects: 0.144200 ms CreateObjectMapping: 0.040500 ms MarkObjects: 1.510600 ms  DeleteObjects: 0.049200 ms)
-
+  Time since last request: 95.680719 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cf29896f4460deb8baf5725b806bdb8') in 0.004215 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.793762 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a282ed9b4e434ae582f6a835b994575') in 0.013523 seconds 
+  Time since last request: 79.702694 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85261e500fa76bdff83b87ffad18994f') in 0.003864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.471736 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b35db6403b3e0f0860396e70004bae8') in 0.003708 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.868864 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42202b7e7ea74c13d359aeea74ed315') in 0.003982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 77.020361 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18cbe3982d9076b7ba85c34c08c220f1') in 0.003633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.948962 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0870410eaee8b9a600159a93c94ed174') in 0.003987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.377926 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3154120f0295a075683b1f17048d93b') in 0.003613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.840694 seconds.
+  path: Assets/New/D3Cg.compute
+  artifactKey: Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New/D3Cg.compute using Guid(868e7b63190200f4e8d032f36ecf06aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33838026083209d9f1500255db2745e8') in 0.004263 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.001672 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.874 seconds
+- Completed reload, in  0.937 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.0 MB.
+System memory in use after: 200.1 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1740.
-Total: 1.676900 ms (FindLiveObjects: 0.127300 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.468900 ms  DeleteObjects: 0.049700 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1834.
+Total: 1.786100 ms (FindLiveObjects: 0.142500 ms CreateObjectMapping: 0.034700 ms MarkObjects: 1.551800 ms  DeleteObjects: 0.056200 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 25.870969 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4febf854c21f012db4f71e63f077b7') in 0.015584 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001879 seconds.
+Registered in 0.001751 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.845 seconds
+- Completed reload, in  0.887 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.9 MB.
-System memory in use after: 197.0 MB.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.0 MB.
+System memory in use after: 201.0 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1742.
-Total: 1.790900 ms (FindLiveObjects: 0.137400 ms CreateObjectMapping: 0.031400 ms MarkObjects: 1.569600 ms  DeleteObjects: 0.051500 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1836.
+Total: 2.251900 ms (FindLiveObjects: 0.149400 ms CreateObjectMapping: 0.050600 ms MarkObjects: 1.989700 ms  DeleteObjects: 0.061100 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 204.680879 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eebcf1621cc2a26049a1a1c99ab32c5') in 0.017327 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001664 seconds.
+Registered in 0.001709 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.883 seconds
+- Completed reload, in  0.872 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1744.
-Total: 1.955300 ms (FindLiveObjects: 0.157500 ms CreateObjectMapping: 0.031600 ms MarkObjects: 1.707800 ms  DeleteObjects: 0.057200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 755.193703 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e5699b420e3e6158547948790dc499') in 0.016156 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001633 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.848 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.7 MB.
-System memory in use after: 196.8 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1746.
-Total: 1.786800 ms (FindLiveObjects: 0.167500 ms CreateObjectMapping: 0.039400 ms MarkObjects: 1.526200 ms  DeleteObjects: 0.052300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 329.798280 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74821459ad61ef5eff12c12fda269da5') in 0.019428 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 543.210084 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983fa7b9aa1dc49903b22165b13cc9bb') in 0.004588 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001798 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.852 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.1 MB.
-System memory in use after: 197.2 MB.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.0 MB.
+System memory in use after: 201.1 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1748.
-Total: 1.754300 ms (FindLiveObjects: 0.147700 ms CreateObjectMapping: 0.030500 ms MarkObjects: 1.521500 ms  DeleteObjects: 0.053700 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1838.
+Total: 2.028000 ms (FindLiveObjects: 0.212600 ms CreateObjectMapping: 0.052400 ms MarkObjects: 1.695900 ms  DeleteObjects: 0.065800 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 19.593854 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8114a7b7b0715d69954323d2985785') in 0.014346 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002541 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1750.
-Total: 1.767600 ms (FindLiveObjects: 0.137500 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.543200 ms  DeleteObjects: 0.055700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.015263 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '309f57aabfeaa24ca380a50d9c311833') in 0.015044 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001756 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.868 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.0 MB.
-System memory in use after: 197.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1752.
-Total: 1.898900 ms (FindLiveObjects: 0.142500 ms CreateObjectMapping: 0.031100 ms MarkObjects: 1.661600 ms  DeleteObjects: 0.062300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.761043 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '782040db359019b3390f132cc2a1709c') in 0.014467 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 58.854500 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b9d465f4e9af9ad74ccfd0d2b53d6c5') in 0.004323 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001765 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.862 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1754.
-Total: 2.210700 ms (FindLiveObjects: 0.231100 ms CreateObjectMapping: 0.056700 ms MarkObjects: 1.867400 ms  DeleteObjects: 0.054300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.417423 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90ba078857c5e9f0156aeaf59ddaf641') in 0.016586 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001936 seconds.
+Registered in 0.001702 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.836 seconds
+- Completed reload, in  0.866 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.8 MB.
-System memory in use after: 196.8 MB.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.0 MB.
+System memory in use after: 201.1 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1756.
-Total: 1.842500 ms (FindLiveObjects: 0.146400 ms CreateObjectMapping: 0.031000 ms MarkObjects: 1.609600 ms  DeleteObjects: 0.054600 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1840.
+Total: 2.239800 ms (FindLiveObjects: 0.181700 ms CreateObjectMapping: 0.033100 ms MarkObjects: 1.959500 ms  DeleteObjects: 0.064500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001768 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.882 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.9 MB.
+System memory in use after: 201.0 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1842.
+Total: 1.972700 ms (FindLiveObjects: 0.189900 ms CreateObjectMapping: 0.048200 ms MarkObjects: 1.674500 ms  DeleteObjects: 0.059000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 142.234487 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.011011 seconds  code(4) message(Build asset version error: assets/gameoflife/conwaysgameoflifesimulation.compute in SourceAssetDB has modification time of '2021-03-28T10:37:12.8252172Z' while content on disk has modification time of '2021-03-28T10:37:16.5471455Z')
-  ERROR: Build asset version error: assets/gameoflife/conwaysgameoflifesimulation.compute in SourceAssetDB has modification time of '2021-03-28T10:37:12.8252172Z' while content on disk has modification time of '2021-03-28T10:37:16.5471455Z'
+  Time since last request: 3000.770160 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(944e3187c399c4a4eaea0ef1e17e5b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(944e3187c399c4a4eaea0ef1e17e5b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89f9fcd87a1911761c7dd09cbd61c576') in 0.121107 seconds 
 ========================================================================
-Received Import Request.
-  Time since last request: 11.805857 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45ed76cbe13b83cfb000f06882be999d') in 0.005097 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 188.707501 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e98f9561942e2891719172a348f49b43') in 0.004675 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 77.894365 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c6657eac8513eb0da058ed9ad19b1e') in 0.008640 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 84.049707 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4a0ca8ed5026b912f0376ab7edeca7') in 0.005542 seconds 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001811 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.871 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.2 MB.
+System memory in use after: 205.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1884.
+Total: 1.762300 ms (FindLiveObjects: 0.157700 ms CreateObjectMapping: 0.035800 ms MarkObjects: 1.515800 ms  DeleteObjects: 0.052300 ms)
+
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.001831 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.858 seconds
+Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.854 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.2 MB.
-System memory in use after: 197.3 MB.
+Unloading 1342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.2 MB.
+System memory in use after: 205.3 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1758.
-Total: 1.756500 ms (FindLiveObjects: 0.131200 ms CreateObjectMapping: 0.030700 ms MarkObjects: 1.537500 ms  DeleteObjects: 0.056400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001721 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.869 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1760.
-Total: 1.949700 ms (FindLiveObjects: 0.181600 ms CreateObjectMapping: 0.035400 ms MarkObjects: 1.677500 ms  DeleteObjects: 0.053800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 202.334982 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65ddfb5871ecc124ebf0784f440c4d8') in 0.013909 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002024 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.854 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.0 MB.
-System memory in use after: 197.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1762.
-Total: 1.847100 ms (FindLiveObjects: 0.192000 ms CreateObjectMapping: 0.032500 ms MarkObjects: 1.557600 ms  DeleteObjects: 0.063800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.667837 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '821aabf3a18cede611cde4d824b3d57c') in 0.014431 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001808 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.854 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1764.
-Total: 1.707600 ms (FindLiveObjects: 0.130300 ms CreateObjectMapping: 0.033000 ms MarkObjects: 1.493200 ms  DeleteObjects: 0.050100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.931554 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05776f2c10a4dc9487bf83782fd5bd14') in 0.013463 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 69.838669 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe00a47cf8abcd25d63f94eb14ef326') in 0.003989 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001834 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.8 MB.
-System memory in use after: 196.9 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1766.
-Total: 1.999500 ms (FindLiveObjects: 0.243800 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.659800 ms  DeleteObjects: 0.056300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.643595 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e14720899b757c281a7e5882e659b5') in 0.014709 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002259 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.842 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.2 MB.
-System memory in use after: 197.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1768.
-Total: 1.796400 ms (FindLiveObjects: 0.133200 ms CreateObjectMapping: 0.030200 ms MarkObjects: 1.573800 ms  DeleteObjects: 0.058200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.053664 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '225f479a15d80d39ca2479bb99aea8b6') in 0.013307 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.877079 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33887e14c571c30d11e6c9e4c4cd3480') in 0.004969 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001757 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.832 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1770.
-Total: 1.699500 ms (FindLiveObjects: 0.156100 ms CreateObjectMapping: 0.031600 ms MarkObjects: 1.455000 ms  DeleteObjects: 0.055500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 87.647672 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0519f5c991b84dde01405bd83b80d18d') in 0.014399 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001625 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.834 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.0 MB.
-System memory in use after: 197.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1772.
-Total: 1.864400 ms (FindLiveObjects: 0.145900 ms CreateObjectMapping: 0.031800 ms MarkObjects: 1.633300 ms  DeleteObjects: 0.052400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001686 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.833 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1774.
-Total: 1.891000 ms (FindLiveObjects: 0.175600 ms CreateObjectMapping: 0.032000 ms MarkObjects: 1.610800 ms  DeleteObjects: 0.071600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 221.612412 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae8d86079acbfae67e2dd48f7501dd79') in 0.012515 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001992 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.8 MB.
-System memory in use after: 196.9 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1776.
-Total: 1.784300 ms (FindLiveObjects: 0.131800 ms CreateObjectMapping: 0.031500 ms MarkObjects: 1.564700 ms  DeleteObjects: 0.055600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 68.130269 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f008dc956dbe381a6a8258ac016e8f0') in 0.014307 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001643 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.851 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.2 MB.
-System memory in use after: 197.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1778.
-Total: 1.842100 ms (FindLiveObjects: 0.142600 ms CreateObjectMapping: 0.031000 ms MarkObjects: 1.612600 ms  DeleteObjects: 0.054900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001896 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1780.
-Total: 2.000700 ms (FindLiveObjects: 0.248700 ms CreateObjectMapping: 0.066000 ms MarkObjects: 1.627100 ms  DeleteObjects: 0.057600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001706 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.849 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.1 MB.
-System memory in use after: 197.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1782.
-Total: 1.743000 ms (FindLiveObjects: 0.163400 ms CreateObjectMapping: 0.031900 ms MarkObjects: 1.491100 ms  DeleteObjects: 0.055700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 225.373880 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725e591ee7fa3b2051252fb1695aac8c') in 0.013558 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001898 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.857 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1784.
-Total: 1.719500 ms (FindLiveObjects: 0.136400 ms CreateObjectMapping: 0.031600 ms MarkObjects: 1.497800 ms  DeleteObjects: 0.052700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.832438 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54c827a1b497c439cafff5746d11331e') in 0.014981 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001948 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.855 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.9 MB.
-System memory in use after: 196.9 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1786.
-Total: 1.706300 ms (FindLiveObjects: 0.134800 ms CreateObjectMapping: 0.030900 ms MarkObjects: 1.490300 ms  DeleteObjects: 0.049500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001906 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.865 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1788.
-Total: 1.806500 ms (FindLiveObjects: 0.132300 ms CreateObjectMapping: 0.031200 ms MarkObjects: 1.571800 ms  DeleteObjects: 0.070200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.957968 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eb32d22516b06cf12e073f73347354f') in 0.014139 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001683 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.850 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.4 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1790.
-Total: 1.922500 ms (FindLiveObjects: 0.175000 ms CreateObjectMapping: 0.033100 ms MarkObjects: 1.658000 ms  DeleteObjects: 0.054900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001842 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.840 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.1 MB.
-System memory in use after: 197.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1792.
-Total: 1.843900 ms (FindLiveObjects: 0.152500 ms CreateObjectMapping: 0.031600 ms MarkObjects: 1.602000 ms  DeleteObjects: 0.056700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.464717 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c0084ba1fe0dd48a5994170474e3f06') in 0.014966 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001681 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.5 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1794.
-Total: 1.800900 ms (FindLiveObjects: 0.141300 ms CreateObjectMapping: 0.033400 ms MarkObjects: 1.573200 ms  DeleteObjects: 0.052100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 60.446934 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8824d050f1ae6de77f34ee3cf7a68f9f') in 0.013410 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001818 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.871 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.9 MB.
-System memory in use after: 197.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1796.
-Total: 1.892200 ms (FindLiveObjects: 0.134700 ms CreateObjectMapping: 0.030900 ms MarkObjects: 1.657700 ms  DeleteObjects: 0.068100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.105365 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.010575 seconds  code(4) message(Build asset version error: assets/gameoflife/conwaysgameoflifesimulation.compute in SourceAssetDB has modification time of '2021-03-28T11:03:33.6703392Z' while content on disk has modification time of '2021-03-28T11:03:37.2670392Z')
-  ERROR: Build asset version error: assets/gameoflife/conwaysgameoflifesimulation.compute in SourceAssetDB has modification time of '2021-03-28T11:03:33.6703392Z' while content on disk has modification time of '2021-03-28T11:03:37.2670392Z'
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001848 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.861 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1798.
-Total: 1.922700 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.032100 ms MarkObjects: 1.687300 ms  DeleteObjects: 0.053700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.301527 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cddc36f1b1a6065ea816c91d7d48446') in 0.013729 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001688 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.862 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.5 MB.
-System memory in use after: 197.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1800.
-Total: 1.924200 ms (FindLiveObjects: 0.140800 ms CreateObjectMapping: 0.032000 ms MarkObjects: 1.685400 ms  DeleteObjects: 0.065200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 145.918717 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d60b76b939d84cf36b888145a27bd4') in 0.013960 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001684 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.1 MB.
-System memory in use after: 197.2 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1802.
-Total: 1.953400 ms (FindLiveObjects: 0.149500 ms CreateObjectMapping: 0.032400 ms MarkObjects: 1.702600 ms  DeleteObjects: 0.067800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001730 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.879 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.5 MB.
-System memory in use after: 197.6 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1804.
-Total: 2.475100 ms (FindLiveObjects: 0.145100 ms CreateObjectMapping: 0.031000 ms MarkObjects: 2.239700 ms  DeleteObjects: 0.058200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.475986 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d7846c747dda2674909836ce6753ff') in 0.013671 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001776 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.866 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.9 MB.
-System memory in use after: 197.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1806.
-Total: 1.743700 ms (FindLiveObjects: 0.147300 ms CreateObjectMapping: 0.030900 ms MarkObjects: 1.511800 ms  DeleteObjects: 0.052800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.270175 seconds.
-  path: Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute
-  artifactKey: Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameOfLife/ConwaysGameOfLifeSimulation.compute using Guid(597a82a0343e9964ea008763d65cbc19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e14eef2a84513f967fabc0a1e7e0def') in 0.014122 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001766 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.839 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1241 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.3 MB.
-System memory in use after: 197.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1808.
-Total: 1.728000 ms (FindLiveObjects: 0.141700 ms CreateObjectMapping: 0.031400 ms MarkObjects: 1.501200 ms  DeleteObjects: 0.052500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 268.758197 seconds.
-  path: Assets/cammove.cs
-  artifactKey: Guid(e6f94ae1503af2e499cf220a46910786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/cammove.cs using Guid(e6f94ae1503af2e499cf220a46910786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc2e92879289ddf69bdc4b2e6423ddee') in 0.009958 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001729 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.860 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1242 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.5 MB.
-System memory in use after: 197.6 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1811.
-Total: 1.840700 ms (FindLiveObjects: 0.165500 ms CreateObjectMapping: 0.034200 ms MarkObjects: 1.588600 ms  DeleteObjects: 0.051300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001642 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.845 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1242 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.2 MB.
-System memory in use after: 197.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1813.
-Total: 1.896700 ms (FindLiveObjects: 0.152700 ms CreateObjectMapping: 0.032800 ms MarkObjects: 1.654700 ms  DeleteObjects: 0.055500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 124.832178 seconds.
-  path: Assets/cammove.cs
-  artifactKey: Guid(e6f94ae1503af2e499cf220a46910786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/cammove.cs using Guid(e6f94ae1503af2e499cf220a46910786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a6739c2d0ccde7abb2893634ec50c4') in 0.005350 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.777577 seconds.
-  path: Assets/FreeCam.cs
-  artifactKey: Guid(e6f94ae1503af2e499cf220a46910786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeCam.cs using Guid(e6f94ae1503af2e499cf220a46910786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '850048e9cc074a3052128ae38fffecfb') in 0.007873 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001832 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.850 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1242 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.5 MB.
-System memory in use after: 197.6 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1815.
-Total: 1.826900 ms (FindLiveObjects: 0.151600 ms CreateObjectMapping: 0.031800 ms MarkObjects: 1.556000 ms  DeleteObjects: 0.086700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 319.690891 seconds.
-  path: Assets/rendering/InstancedSurfaceShader.shader
-  artifactKey: Guid(1698ccf0c8bccb449ad7b0d836e64534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rendering/InstancedSurfaceShader.shader using Guid(1698ccf0c8bccb449ad7b0d836e64534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab160886a4e383278f96bf145f6c85e') in 0.020430 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001729 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.862 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1242 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.0 MB.
-System memory in use after: 197.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1817.
-Total: 2.012600 ms (FindLiveObjects: 0.208100 ms CreateObjectMapping: 0.049200 ms MarkObjects: 1.697400 ms  DeleteObjects: 0.056700 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1886.
+Total: 2.110400 ms (FindLiveObjects: 0.216900 ms CreateObjectMapping: 0.038400 ms MarkObjects: 1.783900 ms  DeleteObjects: 0.069900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

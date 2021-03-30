@@ -1,19 +1,21 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5609 outsize=2393 ok=1
+  api=4 insize=3289 outsize=7699 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5573 outsize=2874 ok=1
+  error: 2 plat 4 at D3Cg.compute(180): 'pos': no matching 0 parameter function
+  error: 2 plat 4 at D3Cg.compute(180): syntax error: unexpected token ']'
+  api=4 insize=3282 outsize=0 ok=0
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6145 outsize=4231 ok=1
+  api=4 insize=3281 outsize=7679 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6164 outsize=5255 ok=1
+  api=4 insize=3301 outsize=7691 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3410 outsize=7775 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3401 outsize=7755 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5186 outsize=12363 ok=1
 Cmd: shutdown
 
 Quitting shader compiler process

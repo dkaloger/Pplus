@@ -4,120 +4,26 @@ using UnityEngine;
 
 public class ConwaysGameOfLife : MonoBehaviour
 {
-    public Texture input;
+ public  RenderTexture Tex1_3D;
+   int noise1Gen;
+ public  int tex1Res;
+ public     ComputeShader noiseCompute;
+  void Start()
+{
+        //Create 3D Render Texture 1
+        Tex1_3D = new RenderTexture(tex1Res, tex1Res, 1);
+        Tex1_3D.enableRandomWrite = true;
+        Tex1_3D.dimension = UnityEngine.Rendering.TextureDimension.Tex3D;
+      //  Tex1_3D.volumeDepth = tex1Res;
+      Tex1_3D.depth = 0;
+        Tex1_3D.Create();
+        noise1Gen = noiseCompute.FindKernel("Noise1Gen");
+        noiseCompute.SetTexture(noise1Gen, "Noise1", Tex1_3D);
+}
+ 
+public void Update()
+{
+        noiseCompute.Dispatch(noise1Gen, tex1Res / 8, tex1Res / 8, tex1Res / 8);
+}
 
-    public int width = 728;
-    public int height = 485 * 2;
-
-    public ComputeShader compute;
-    public RenderTexture Input;
-    public RenderTexture Output;
-
-    public RenderTexture metaInput;
-    public RenderTexture metaOutput;
-
-    public Material material ;
-    public Material debug;
-
-    private int kernel;
-    private bool pingPong;
-    public int  T;
-
-
-    public Texture2D texture;
-
-    int count_x = 0;
-    int count_y = 0;
-    public float[] current;
-    public bool done;
-    int t;
-   public float sum;
-    public float average;
-    // Use this for initialization
-
-
-    RenderTexture Makert(RenderTexture Input)
-    {
-        Input = new RenderTexture(width, height, 24);
-        Input.name = "Input";
-        Input.wrapMode = TextureWrapMode.Repeat;
-        Input.enableRandomWrite = true;
-        Input.filterMode = FilterMode.Point;
-        Input.useMipMap = false;
-        Input.Create();
-
-        return Input;
-    }
-    Texture2D transferRt( RenderTexture target)
-    {
-        UnityEngine.Object.Destroy(texture);
-        texture = new Texture2D(count_x, count_y, TextureFormat.RGB24, false);
-
-        Rect rectReadPicture = new Rect(0, 0, count_x, count_y);
-
-        RenderTexture.active = target;
-
-        // Read pixels
-        texture.ReadPixels(rectReadPicture, 0, 0);
-        texture.Apply();
-
-        RenderTexture.active = null; // added to avoid errors 
-
-        return texture;
-    }
-    void Start () {
-   
-   width = input.width;
-     height = input.height;
-        count_x = width;
-        count_y = height;
-       
-           kernel = compute.FindKernel("GameOfLife");
-
-        Input= Makert(Input);
-        Output= Makert(Output);
-        metaOutput = Makert(metaOutput);
-        metaInput = Makert(metaInput);
-
-
-        pingPong = true;
-
-        compute.SetFloat("Width", width);
-        compute.SetFloat("Height", height);
-        Graphics.Blit(input, Output);
-        Graphics.Blit(input, Input);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-     
-      
-
-
-
-            compute.SetTexture(kernel, "Input", Input);
-            compute.SetTexture(kernel, "Result", Output);
-
-            compute.SetTexture(kernel, "metadataInput", metaInput);
-            compute.SetTexture(kernel, "metadataResult", metaOutput);
-          
-            compute.Dispatch(kernel, width / 1, height / 1, 1);
-
-            material.mainTexture = Output;
-            debug.mainTexture = metaOutput;
-
-        //    current[t] = (1f / Time.unscaledDeltaTime);
-            t++;
-            Graphics.Blit(transferRt(Output), Input);
-            Graphics.Blit(transferRt(metaOutput), metaInput);
-  
-        }
-
-
-   
-    private void LateUpdate() {
-        
-    }
 }

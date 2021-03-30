@@ -1,25 +1,16 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5418 outsize=5315 ok=1
+  api=4 insize=3276 outsize=7639 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5398 outsize=4135 ok=1
+  api=4 insize=3137 outsize=7083 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(188): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5640 outsize=4287 ok=1
+  error: 2 plat 4 at D3Cg.compute(162): if statement conditional expressions must evaluate to a scalar
+  api=4 insize=3351 outsize=0 ok=0
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(402): syntax error: unexpected end of file
-  api=4 insize=5696 outsize=0 ok=0
+  api=4 insize=3431 outsize=7803 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5678 outsize=5579 ok=1
-Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6145 outsize=4231 ok=1
+  api=4 insize=3459 outsize=7803 ok=1
 Cmd: shutdown
 
 Quitting shader compiler process

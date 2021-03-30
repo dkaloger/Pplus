@@ -1,23 +1,18 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(185): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5536 outsize=2144 ok=1
+  api=4 insize=3298 outsize=7767 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(188): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=5580 outsize=4135 ok=1
+  api=4 insize=3275 outsize=7575 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(319): 'move': cannot implicitly convert from 'uint2' to 'uint3'
-  api=4 insize=5688 outsize=0 ok=0
+  api=4 insize=3494 outsize=7915 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 2 plat 4 at ConwaysGameOfLifeSimulation.compute(319): syntax error: unexpected token ')'
-  api=4 insize=5710 outsize=0 ok=0
+  error: 1 plat 4 at D3Cg.compute(162): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=3514 outsize=7863 ok=1
 Cmd: compileComputeKernel
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(191): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at ConwaysGameOfLifeSimulation.compute(321): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=6173 outsize=5431 ok=1
+  api=4 insize=3410 outsize=7759 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5853 outsize=14227 ok=1
 Cmd: shutdown
 
 Quitting shader compiler process

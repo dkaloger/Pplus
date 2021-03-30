@@ -1,0 +1,10 @@
+   frag_out output;
+              for(uint z = 0;z < 100 ; z++){
+                  if(_DataTex[float3(i.vertex.x/(1920 /100),i.vertex.y/(1080/100),z)].a != 0){
+     output.colour.rgb = _DataTex[float3(i.vertex.x/(1920 /100),i.vertex.y/(1080/100),z)] /(z/10.0f);
+             output.colour.a =1;
+              break;
+              
+                  }
+                
+            

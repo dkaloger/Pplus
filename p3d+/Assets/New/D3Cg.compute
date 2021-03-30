@@ -1,0 +1,227 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWStructuredBuffer<float4> Result;
+RWStructuredBuffer<float4> ResultFinal;
+RWStructuredBuffer<float4> Meta;
+int Size = 10;
+
+float4 black = float4(0, 0, 0, 0);
+float4 white = float4(1, 1, 1, 1);
+ float3 down = float3(0, -1,0);
+float3 Cameraposition = float3(10,10,10);
+bool fourfcompare(float4 a, float4 b) {
+	if (a.r == b.r && a.g == b.g && a.b == b.b)
+    {
+		return true;
+	}
+	else
+    {
+		return false;
+	}
+}
+int pos(uint3 id){
+    return id.x + id.y *Size + id.z *(Size*Size) ;
+}
+bool doiexist(float3 id)
+{
+    if (!fourfcompare(Result[pos(id)], black))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Result_canfall(uint3 id)
+{
+    if (fourfcompare(Result[pos(id + down)], black) && id.y + down.y !=0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+void move(uint3 from, uint3 to)
+{
+   
+    if (doiexist(from) && !doiexist(to)&&to.y !=0 &&to.x !=0 &&to.z !=0 )
+  {
+        Result[pos(to)] = Result[pos(from)];
+   Result[pos(from)] = black;
+   }
+
+
+}
+
+void gravity(uint3 id)
+{
+    float y;
+    float tot;
+    if (id.y == 1)
+    {
+        for (int yi = 0; yi < Size; yi++)
+        {
+    
+            y++;
+            if (doiexist(uint3(id.x, y, id.z)))
+            {
+                if (Result_canfall(uint3(id.x, y, id.z)))
+                {
+          
+                    move(uint3(id.x, y, id.z), uint3(id.x, y - 1,id.z));
+                }          
+            }
+        }   
+    }
+}
+   float random (uint3 id)
+            {
+                return frac(sin(dot(id.xy,float2(12.9898*id.z,78.233*id.z)))*43758.5453123 );
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[numthreads(10,10,10)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    float4 black = float4(0, 0, 0, 0);
+float4 white = float4(1, 1, 1, 1);
+ float3 down = float3(0, -1,0);
+
+if(id.y == 2){
+    Meta[pos(id)].x = 0.2f ;
+    Result[pos(id)] = white;
+}
+
+if(id.x==50&& id.z==50 &&id.y==99){
+
+Result[id.x+id.y*Size+id.z *(Size*Size)]= float4(1,0,0,1);
+
+
+}
+move(id,id-float3(0,1,0));
+if(doiexist(id) &&  Meta[pos(id+down)].x == 0.2f){
+    Meta[pos(id)].x = 0.2f;
+
+}
+  if(!doiexist(id)){
+   Meta[pos(id)] = black;
+}
+
+//slide 
+if(Meta[pos(id)].x == 0.2f&& doiexist(id+float3(0,1,0))){
+
+
+
+
+}
+move(id,id +float3(0,-1,0));
+if(Meta[pos(id)].x == 0.2f&& doiexist(id+float3(0,1,0))){
+
+if( random(id)<0.25f)
+{
+move(id,id +float3(-1,0,0));
+}
+else if(random(id)<0.5f)
+{
+move(id,id +float3(1,0,0));
+}
+else if(random(id)<0.75f)
+{
+move(id,id +float3(0,0,1));
+}
+else if(random(id)<1.0f)
+{
+move(id,id +float3(0,0,-1));
+}
+}
+
+
+//	 Result[pos(id)] = float4(id.x/10,id.y/10,0,1);
+	
+
+//optimizer 
+ResultFinal[pos(id)] = black;
+
+
+if(id.x ==20 &&id.z == 20 &&id.y == 20){
+    
+//    Result[pos(Cameraposition)] = float4(0,1,0,1);  
+}
+
+
+if(!fourfcompare(Result[pos(id)],black))
+{
+//if(  fourfcompare(black,Result[pos(float3(id.x- Cameraposition.x,id.y,id.z- Cameraposition.z) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(-1,0,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,-2,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,0,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,0,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+//else if(  fourfcompare(black,Result[pos(id+ float3(1,-1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+//else if(  fourfcompare(black,Result[pos(id+ float3(-1,-1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+
+
+
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+
+
+
+
+     }
+if(id.x ==20 &&id.z == 20 &&id.y == 20){
+    
+    ResultFinal[pos(Cameraposition)] = float4(0,1,0,1);  
+}
+
+
+if(id.x==10 && id.z==10 && id.y==10  ){
+   
+   ResultFinal[pos(id)] = float4(0,0,1,1);   
+}
+
+
+
+}
+
+
