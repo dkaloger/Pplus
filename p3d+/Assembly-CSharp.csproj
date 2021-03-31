@@ -64,10 +64,10 @@
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\VM.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OW.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\ByteConvert.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\IS.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\File\FileMetaInformation.cs" />
      <Compile Include="Assets\rendering new\Scripts\GUI\Components\EditSliceGUI.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\PN.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\IS.cs" />
      <Compile Include="Assets\rendering new\Scripts\VolumeObject\VolumeObjectFactory.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\DataElementDictionaryEntry.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\LT.cs" />
