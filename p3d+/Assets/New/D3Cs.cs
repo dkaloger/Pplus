@@ -5,7 +5,7 @@ using UnityEditor;
 using TMPro;
 public class D3Cs : MonoBehaviour
 {
-   public Texture3D texture;
+  // public Texture3D texture;
  public  int size ;
    public ComputeShader cg;
 
@@ -52,7 +52,7 @@ Vector3 [] posar;
         texture.wrapMode = wrapMode;
 
         // Create a 3-dimensional array to store color data
-        colors = new Color[size * size * size];
+     
 
         // Populate the array so that the x, y, and z values of the texture will map to red, blue, and green colors
         float inverseResolution = 1.0f / (size - 1.0f);
@@ -68,8 +68,9 @@ Vector3 [] posar;
     }
     void Start()
     {
+           colors = new Color[size * size * size];
   posar = new Vector3[1000000];
-  texture = make3dtex();
+//  texture = make3dtex();
   int bsize = sizeof(float) * 4 ;
     int csize = sizeof(float) * 4 ;
        int dsize = sizeof(float) * 3 ;
@@ -106,10 +107,10 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
 
      finalp.GetData(posar);
   //may cause memory leak   texpix.Dispose();
-   texture.SetPixels(colors);
-   texture.Apply();  
+ //  texture.SetPixels(colors);
+ //  texture.Apply();  
      
-             texture.SetPixels(colors);
+        //     texture.SetPixels(colors);
         // gamep.texture = texture;
    game.GetComponent<MeshRenderer>().material.SetTexture("_GradientTex",null) ;
 
