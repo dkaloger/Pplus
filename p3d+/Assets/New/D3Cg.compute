@@ -4,6 +4,7 @@
 // Create a RenderTexture with enableRandomWrite flag and set it
 // with cs.SetTexture
 RWStructuredBuffer<float4> Result;
+RWStructuredBuffer<float3> PositionsFinal;
 RWStructuredBuffer<float4> ResultFinal;
 RWStructuredBuffer<float4> Meta;
 int Size = 10;
@@ -170,40 +171,62 @@ if(id.x ==20 &&id.z == 20 &&id.y == 20){
 
 if(!fourfcompare(Result[pos(id)],black))
 {
-//if(  fourfcompare(black,Result[pos(float3(id.x- Cameraposition.x,id.y,id.z- Cameraposition.z) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-if(  fourfcompare(black,Result[pos(id+ float3(-1,0,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(0,-2,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(0,0,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(0,0,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+//if(  fourfcompare(black,Result[pos(float3(id.x- Cameraposition.x,id.y,id.z- Cameraposition.z) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
 
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(-1,0,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(0,-2,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(0,0,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(0,0,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
 
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
 
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,-1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,1) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-
-//else if(  fourfcompare(black,Result[pos(id+ float3(1,-1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-//else if(  fourfcompare(black,Result[pos(id+ float3(-1,-1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
-
-
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
 
 
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
 
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
+
+//else if(  fourfcompare(black,Result[pos(id+ float3(1,-1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+
+//else if(  fourfcompare(black,Result[pos(id+ float3(-1,-1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+
+
+
+
+
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+}
 
 
 
@@ -219,6 +242,28 @@ if(id.x==10 && id.z==10 && id.y==10  ){
    
    ResultFinal[pos(id)] = float4(0,0,1,1);   
 }
+
+
+
+if(!fourfcompare(black,ResultFinal[pos(id)]) ){
+PositionsFinal[pos(id)] = id;
+}else {
+   PositionsFinal[pos(id)] = float3(0,0,10000); 
+
+/*skipper 
+  for (int i = 0; i < 100-id.x; i++)
+           {
+               if(ResultFinal[pos(float3(id.x+i,id.y,id.z))].a != 0){
+
+
+                PositionsFinal[pos(id)].x = i;
+                break;
+               }
+           }
+           */
+}
+
+
 
 
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class tex : MonoBehaviour
 {
-    [MenuItem("CreateExamples/3DTexture")]
+
     static void CreateTexture3D()
     {
         // Configure the texture
@@ -41,7 +41,7 @@ public class tex : MonoBehaviour
         texture.Apply();        
 
         // Save the texture to your Unity Project
-        AssetDatabase.CreateAsset(texture, "Assets/Example3DTexture.asset");
+        //AssetDatabase.CreateAsset(texture, "Assets/Example3DTexture.asset");
     }
 }
 
