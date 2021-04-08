@@ -50,7 +50,7 @@ public AsyncGPUReadbackRequest readbackRequest;
      public   Color color;
     }
  void RunMain(AsyncGPUReadbackRequest r){
-print("suc");
+//print("suc");
 
 
 tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
@@ -71,30 +71,31 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
 
  
       var curp = r.GetData<voxel>();
-      print(curp.Length);
+  //    print(curp.Length);
 
 
   readbackRequest = AsyncGPUReadback.Request(final,RunMain);
 
-    Stopwatch stopWatch = new Stopwatch();
-   stopWatch.Start();
+   //Stopwatch stopWatch = new Stopwatch();
+  // stopWatch.Start();
     
-     for (int i = 0; i < curp.Length; i++) //100ms !
+     for (int i = 0; i < curp.Length; i++) //10ms !
       {
    if(curp[i].pos.z != 1000){
   validpos.Add(curp[i].pos);
     validcolor.Add(curp[i].color);
     }
-    
-    else{
-        i += (int)curp[i].pos.x;
-    }
+       else{
+ i += (int)curp[i].pos.x;
 
+
+ }
+ 
+if(i>curp.Length) break;
         }
 
-
-        stopWatch.Stop();
-        print(stopWatch.ElapsedMilliseconds);
+    //    stopWatch.Stop();
+      //  print(stopWatch.ElapsedMilliseconds);
         
       
 

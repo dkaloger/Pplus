@@ -36,95 +36,95 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\File\DicomFile.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\FD.cs" />
-     <Compile Include="Assets\rendering new\Scripts\GUI\Components\WindowGUID.cs" />
-     <Compile Include="Assets\rendering new\Scripts\VolumeObject\SlicingPlane.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\UidDictionary.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\ValueLength.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\TransferSyntax.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\UN.cs" />
-     <Compile Include="Assets\rendering new\Scripts\Utils\NoiseTextureGenerator.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\AE.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\DataSet\DataSet.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OW.cs" />
-     <Compile Include="Assets\rendering new\Scripts\GUI\Components\EditSliceGUI.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\IS.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\ByteConvert.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\PN.cs" />
-     <Compile Include="Assets\rendering new\Scripts\VolumeObject\VolumeObjectFactory.cs" />
-     <Compile Include="Assets\rendering new\Scripts\TransferFunction\TransferFunction.cs" />
-     <Compile Include="Assets\rendering\renderer.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\EncodingException.cs" />
-     <Compile Include="Assets\rendering new\Scripts\VolumeData\VolumeDataset.cs" />
-     <Compile Include="Assets\rendering new\Scripts\TransferFunction\TransferFunction2D.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\ST.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\Value.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\IDicomStreamMember.cs" />
-     <Compile Include="Assets\rendering new\Scripts\GUI\Components\RuntimeGUI.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Image\PixelData.cs" />
-     <Compile Include="Assets\rendering new\Scripts\VolumeObject\CrossSectionPlane.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\AT.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\IDicomDictionary.cs" />
-     <Compile Include="Assets\rendering new\Scripts\VolumeObject\VolumeRenderedObject.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\DicomException.cs" />
-     <Compile Include="Assets\FreeCam.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\Tag.cs" />
-     <Compile Include="Assets\rendering new\Scripts\Importing\RawDatasetImporter.cs" />
-     <Compile Include="Assets\rendering new\Scripts\Importing\DatasetIniReader.cs" />
-     <Compile Include="Assets\renderer v3\csrender.cs" />
-     <Compile Include="Assets\rendering new\Scripts\TransferFunction\TFControlPoints.cs" />
-     <Compile Include="Assets\rendering new\Scripts\GUI\RuntimeFileBrowser.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OF.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OB.cs" />
-     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\CS.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\Type\PersonName.cs" />
      <Compile Include="Assets\rendering new\Scripts\Importing\DensitySource.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\AS.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\File\DicomFile.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\FL.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\DataSet\NestedDataSet.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\File\XmlFile.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\DataSet\Sequence.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\FD.cs" />
+     <Compile Include="Assets\rendering new\Scripts\GUI\Components\WindowGUID.cs" />
+     <Compile Include="Assets\rendering new\Scripts\VolumeObject\SlicingPlane.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\Type\Age.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\UidDictionary.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\ValueLength.cs" />
      <Compile Include="Assets\rendering new\Scripts\VolumeObject\MaterialFactory.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\TransferSyntax.cs" />
      <Compile Include="Assets\rendering new\Scripts\Importing\DatasetImporterBase.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\UN.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\DicomContext.cs" />
+     <Compile Include="Assets\rendering new\Scripts\Utils\NoiseTextureGenerator.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\AE.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\DataSet\DataSet.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\SL.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\DA.cs" />
      <Compile Include="Assets\GameOfLife\ConwaysGameOfLife.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\VM.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OW.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\ByteConvert.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\IS.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\File\FileMetaInformation.cs" />
+     <Compile Include="Assets\rendering new\Scripts\GUI\Components\EditSliceGUI.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\PN.cs" />
+     <Compile Include="Assets\rendering new\Scripts\VolumeObject\VolumeObjectFactory.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\DataElementDictionaryEntry.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\LT.cs" />
+     <Compile Include="Assets\rendering new\Scripts\TransferFunction\TransferFunction.cs" />
+     <Compile Include="Assets\rendering\renderer.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\VR.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\TM.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\EncodingException.cs" />
      <Compile Include="Assets\rendering new\Scripts\TransferFunction\TransferFunctionDatabase.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\DS.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\SH.cs" />
+     <Compile Include="Assets\rendering new\Scripts\VolumeData\VolumeDataset.cs" />
+     <Compile Include="Assets\rendering new\Scripts\TransferFunction\TransferFunction2D.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\ST.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\US.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\Value.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\UI.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\DT.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\IDicomStreamMember.cs" />
+     <Compile Include="Assets\rendering new\Scripts\GUI\Components\RuntimeGUI.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\SS.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\DataElementDictionary.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Image\PixelData.cs" />
+     <Compile Include="Assets\rendering new\Scripts\VolumeObject\CrossSectionPlane.cs" />
      <Compile Include="Assets\rendering new\Scripts\Importing\DensityHelper.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\LO.cs" />
      <Compile Include="Assets\rendering new\Scripts\GUI\Components\RuntimeFileBrowserComponent.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\AT.cs" />
      <Compile Include="Assets\rendering new\Scripts\Utils\HistogramTextureGenerator.cs" />
      <Compile Include="Assets\rendering new\Scripts\Importing\DICOMImporter.cs" />
      <Compile Include="Assets\rendering new\Scripts\VolumeObject\RenderMode.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\IDicomDictionary.cs" />
      <Compile Include="Assets\rendering new\Scripts\Importing\ImageSequenceImporter.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\UidDictionaryEntry.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\DataSet\DataElement.cs" />
+     <Compile Include="Assets\rendering new\Scripts\VolumeObject\VolumeRenderedObject.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\DicomException.cs" />
      <Compile Include="Assets\rendering new\Scripts\GUI\Components\EditVolumeGUI.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\File\AcrNemaFile.cs" />
+     <Compile Include="Assets\FreeCam.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\DataStructure\Tag.cs" />
+     <Compile Include="Assets\rendering new\Scripts\Importing\RawDatasetImporter.cs" />
+     <Compile Include="Assets\rendering new\Scripts\Importing\DatasetIniReader.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Registry\Uid.cs" />
+     <Compile Include="Assets\renderer v3\csrender.cs" />
      <Compile Include="Assets\tex.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\CharacterRepertoire.cs" />
+     <Compile Include="Assets\rendering new\Scripts\TransferFunction\TFControlPoints.cs" />
+     <Compile Include="Assets\rendering new\Scripts\GUI\RuntimeFileBrowser.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\UL.cs" />
      <Compile Include="Assets\rendering new\Scripts\Importing\DatasetImporterUtility.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OF.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\UT.cs" />
      <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\SQ.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\OB.cs" />
      <Compile Include="Assets\New\D3Cs.cs" />
+     <Compile Include="Assets\rendering new\3rdparty\openDicom\Encoding\CS.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\rendering new\Resources\ComputeHistogram.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -743,17 +743,11 @@
     <Reference Include="Unity.Recorder.Editor">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Simulator.Editor">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.Simulator.Editor.dll</HintPath>
+    <Reference Include="Unity.VSCode.Editor">
+        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Base">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Editor">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -770,17 +764,8 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Simulator.Extension">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.Simulator.Extension.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AdaptivePerformance">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>

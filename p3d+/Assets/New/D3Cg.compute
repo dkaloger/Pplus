@@ -30,9 +30,12 @@ bool fourfcompare(float4 a, float4 b) {
 int pos(uint3 id){
     return id.x + id.y *Size + id.z *(Size*Size) ;
 }
+float rgbsum(float3 a){
+    return a.r+a.b+a.g;
+}
 bool doiexist(float3 id)
 {
-    if (!fourfcompare(Result[pos(id)], black))
+    if (rgbsum(Result[pos(id)])>0.1f)
     {
         return true;
     }
@@ -92,7 +95,13 @@ void gravity(uint3 id)
             }
 
 
-
+float3 depos(int i){
+    float3 r;
+    r.x= i % Size;
+    r.y= i / Size;
+    r.z= i /(Size*Size) ;
+return r;
+}
 
 
 
@@ -110,6 +119,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
     float4 black = float4(0, 0, 0, 0);
 float4 white = float4(1, 1, 1, 1);
  float3 down = float3(0, -1,0);
+
 
 if(id.y == 2){
     Meta[pos(id)].x = 0.2f ;
@@ -176,62 +186,25 @@ if(id.x ==20 &&id.z == 20 &&id.y == 20){
 if(!fourfcompare(Result[pos(id)],black))
 {
 //if(  fourfcompare(black,Result[pos(float3(id.x- Cameraposition.x,id.y,id.z- Cameraposition.z) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-
-if(  fourfcompare(black,Result[pos(id+ float3(-1,0,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(0,-2,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(0,0,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(0,0,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
+//ResultFinal[pos(id)].color = Result[pos(id)];
 
 
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-
-//else if(  fourfcompare(black,Result[pos(id+ float3(1,-1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-
-//else if(  fourfcompare(black,Result[pos(id+ float3(-1,-1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+  for (float zb = 0; zb < 4; zb++){
+ 
+ for (float xb = 0; xb < 4; xb++){
+      for (float yb = 0; yb < 4; yb++){
+     
+     if(!doiexist(id+float3(-2 +xb,-2 +yb,-2+zb))){
+ResultFinal[pos(id)].color = Result[pos(id)];
+     }
+  
+ }}}
+ 
 
 
+//if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  ResultFinal[pos(id)].color = Result[pos(id)];
 
-
-
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
-}
-
+ //ResultFinal[pos(id)].color =Result[pos(id)];
 
 
 
@@ -254,28 +227,28 @@ ResultFinal[pos(id)].pos = id;
 }else {
  //  ResultFinal[pos(id)].pos = float3(0,0,10000); 
  //more optimization needed;
- int fi =0;
- for (int i = 0; i < 200-id.x; i++){
-       if(!fourfcompare(Result[pos(id+float3(i,0,0))],black)){
-           break;
-       }
-    }
-      ResultFinal[pos(id)].pos = float3(fi,0,1000); 
+
 
      
+int fi =0;
+  
+ for (int i = 0; i < 220; i++){
+       if(doiexist(id+depos(i))){
+fi =i; 
+           break;
+       }
+       if(i==199){
+           fi =i; 
+           
+       }
+    }
+    
 
-/*skipper 
-  for (int i = 0; i < 100-id.x; i++)
-           {
-               if(ResultFinal[pos(float3(id.x+i,id.y,id.z))].a != 0){
+     ResultFinal[pos(id)].pos = float3(fi ,0,1000); 
+     
+  }
 
 
-                PositionsFinal[pos(id)].x = i;
-                break;
-               }
-           }
-           */
-}
 
 
 

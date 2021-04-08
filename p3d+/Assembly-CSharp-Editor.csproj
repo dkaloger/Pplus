@@ -39,9 +39,9 @@
      <Compile Include="Assets\rendering new\Editor\ValueRangeEditorWindow.cs" />
      <Compile Include="Assets\rendering new\Editor\CrossSectionPlaneEditorWindow.cs" />
      <Compile Include="Assets\rendering new\Editor\TransferFunctionEditorWindow.cs" />
+     <Compile Include="Assets\rendering new\Editor\TransferFunction2DEditorWindow.cs" />
      <Compile Include="Assets\rendering new\Editor\RAWDatasetImporterEditorWIndow.cs" />
      <Compile Include="Assets\rendering new\Editor\SliceRenderingEditorWindow.cs" />
-     <Compile Include="Assets\rendering new\Editor\TransferFunction2DEditorWindow.cs" />
      <Compile Include="Assets\rendering new\Editor\EditorDatasetImporter.cs" />
      <Compile Include="Assets\rendering new\Editor\SelectionHelper.cs" />
      <Compile Include="Assets\rendering new\Editor\VolumeRenderedObjectCustomInspector.cs" />
@@ -640,17 +640,11 @@
     <Reference Include="Unity.Recorder.Editor">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Simulator.Editor">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.Simulator.Editor.dll</HintPath>
+    <Reference Include="Unity.VSCode.Editor">
+        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Base">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Editor">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -667,17 +661,8 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Simulator.Extension">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.Simulator.Extension.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AdaptivePerformance">
-        <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.AdaptivePerformance.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/Code/projects/p+/p3d+/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>

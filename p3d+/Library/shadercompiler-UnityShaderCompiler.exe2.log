@@ -1,8 +1,78 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.0a9/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 2 plat 4 at D3Cg.compute(180): cannot implicitly convert from 'float4' to 'struct voxel'
-  api=4 insize=6111 outsize=0 ok=0
-Unhandled exception: Read from shader compiler process failed: error -2147483644, 0/4 bytes read
-
-Quitting shader compiler process
+  error: 1 plat 4 at D3Cg.compute(259): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(270): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=6680 outsize=15231 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(259): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(273): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=6718 outsize=15279 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(259): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(273): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4061 outsize=8849 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(209): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(223): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4058 outsize=8811 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(221): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(235): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4697 outsize=9455 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(228): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(242): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=5433 outsize=9959 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 2 plat 4 at D3Cg.compute(186): syntax error: unexpected token ')'
+  error: 2 plat 4 at D3Cg.compute(188): syntax error: unexpected token ')'
+  error: 2 plat 4 at D3Cg.compute(189): syntax error: unexpected token ')'
+  error: 2 plat 4 at D3Cg.compute(191): syntax error: unexpected token ')'
+  error: 2 plat 4 at D3Cg.compute(192): syntax error: unexpected token ')'
+  error: 1 plat 4 at D3Cg.compute(225): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(239): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4696 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(236): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(250): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4777 outsize=10935 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(224): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(238): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4176 outsize=8299 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(187): loop only executes for 1 iteration(s), forcing loop to unroll
+  error: 1 plat 4 at D3Cg.compute(188): loop only executes for 1 iteration(s), forcing loop to unroll
+  error: 1 plat 4 at D3Cg.compute(224): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(238): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4218 outsize=8627 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(187): loop only executes for 1 iteration(s), forcing loop to unroll
+  error: 1 plat 4 at D3Cg.compute(188): loop only executes for 1 iteration(s), forcing loop to unroll
+  error: 1 plat 4 at D3Cg.compute(224): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(238): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4234 outsize=8579 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(188): loop only executes for 1 iteration(s), forcing loop to unroll
+  error: 1 plat 4 at D3Cg.compute(224): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(238): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4176 outsize=8695 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(227): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at D3Cg.compute(241): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=4188 outsize=8847 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at D3Cg.compute(38): 'rgbsum': implicit truncation of vector type
+  error: 1 plat 4 at D3Cg.compute(100): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at D3Cg.compute(101): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at D3Cg.compute(102): integer divides may be much slower, try using uints if possible.
+  api=4 insize=4092 outsize=8987 ok=1
+Cmd: shutdown
