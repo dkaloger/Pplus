@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using TMPro;
+using System.Threading;
+using UnityEngine.Experimental.Rendering;
+using UnityEngine.Rendering;
+using System;
+using System.Diagnostics;
 public class D3Cs : MonoBehaviour
 {
   // public Texture3D texture;
@@ -21,7 +26,7 @@ public class D3Cs : MonoBehaviour
   public GameObject game2;
 
 public GameObject tmp;
-Vector3 [] posar;
+Vector3[] posar;
  List<Vector3> validpos = new List<Vector3>();
   List<Color> validcolor = new List<Color>();
  //renderer 
@@ -35,141 +40,167 @@ Vector3 [] posar;
     private ComputeBuffer positionBuffer;
     private ComputeBuffer argsBuffer;
     private uint[] args = new uint[5] { 0, 0, 0, 0, 0 };
-
- 
-  
- 
-    // Start is called before the first frame update
+public AsyncGPUReadbackRequest readbackRequest;
+ public AsyncGPUReadbackRequest readbackRequestc;
      Color[] colors;
-    Texture3D make3dtex(){
+     Vector3 camrel;
 
-         //  int size = 32;
-        TextureFormat format = TextureFormat.RGBA32;
-        TextureWrapMode wrapMode =  TextureWrapMode.Clamp;
-
-        // Create the texture and apply the configuration
-        Texture3D texture = new Texture3D(size, size, size, format, false);
-        texture.wrapMode = wrapMode;
-
-        // Create a 3-dimensional array to store color data
-     
-
-        // Populate the array so that the x, y, and z values of the texture will map to red, blue, and green colors
-        float inverseResolution = 1.0f / (size - 1.0f);
-     
-        // Copy the color values to the texture
-        texture.SetPixels(colors);
-
-        // Apply the changes to the texture and upload the updated texture to the GPU
-        texture.Apply();        
-
-        return texture;
-        
+    struct voxel{
+     public   Vector3 pos;
+     public   Color color;
     }
+ void RunMain(AsyncGPUReadbackRequest r){
+print("suc");
+
+
+tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
+
+
+
+    cg.SetInt("Size",size) ;    
+    camrel = Camera.main.transform.position + new Vector3(50,50,50);
+    cg.SetFloats("Cameraposition",camrel.x,camrel.y,camrel.z) ;        
+    cg.SetBuffer(0,"Result",texpix);
+    cg.SetBuffer(0,"ResultFinal",final);
+    cg.SetBuffer(0,"Meta",meta);
+    cg.Dispatch(0,size /8,size /8,size /8);
+    
+               
+  validpos.Clear();
+  validcolor.Clear();
+
+ 
+      var curp = r.GetData<voxel>();
+      print(curp.Length);
+
+
+  readbackRequest = AsyncGPUReadback.Request(final,RunMain);
+
+    Stopwatch stopWatch = new Stopwatch();
+   stopWatch.Start();
+    
+     for (int i = 0; i < curp.Length; i++) //100ms !
+      {
+   if(curp[i].pos.z != 1000){
+  validpos.Add(curp[i].pos);
+    validcolor.Add(curp[i].color);
+    }
+    
+    else{
+        i += (int)curp[i].pos.x;
+    }
+
+        }
+
+
+        stopWatch.Stop();
+        print(stopWatch.ElapsedMilliseconds);
+        
+      
+
+        positionBuffer.Dispose();
+
+  positionBuffer = new ComputeBuffer(validpos.Count, sizeof(float) * 3);
+  
+     positionBuffer.SetData(validpos);
+        instanceMaterial.SetBuffer("positionBuffer", positionBuffer);
+
+         colbuff.Dispose();
+   colbuff = new ComputeBuffer(validpos.Count, sizeof(float) * 4);
+ colbuff.SetData(validcolor);
+        instanceMaterial.SetBuffer("colors", colbuff);
+
+ }
     void Start()
     {
+     //   print( sizeof(float)*7);
            colors = new Color[size * size * size];
-  posar = new Vector3[1000000];
-//  texture = make3dtex();
+  posar = new Vector3[size*size*size];
   int bsize = sizeof(float) * 4 ;
     int csize = sizeof(float) * 4 ;
-       int dsize = sizeof(float) * 3 ;
+     //  int dsize = sizeof(float) * 3 ;
 texpix = new ComputeBuffer(size *size *size,bsize);
 meta = new ComputeBuffer(size *size *size,csize);
-final = new ComputeBuffer(size *size *size,bsize);
-finalp = new ComputeBuffer(size *size *size,dsize);
+final = new ComputeBuffer(size *size *size,sizeof(float)*7 );
+//finalp = new ComputeBuffer(size *size *size,dsize);
 
 texpix.SetData(colors);
 //Renderer
      argsBuffer = new ComputeBuffer(1, args.Length * sizeof(uint), ComputeBufferType.IndirectArguments);
         UpdateBuffers();
+
+  //  print(Time.time);
+
+
+    //compute
+          cg.SetInt("Size",size) ;    
+          camrel = Camera.main.transform.position + new Vector3(50,50,50);
+          cg.SetFloats("Cameraposition",camrel.x,camrel.y,camrel.z) ;        
+          cg.SetBuffer(0,"Result",texpix);
+          cg.SetBuffer(0,"ResultFinal",final);
+          cg.SetBuffer(0,"Meta",meta);
+          cg.Dispatch(0,size /8,size /8,size /8);
+          
+ 
+            // extract
+          readbackRequest = AsyncGPUReadback.Request(final,RunMain);
+
+  
     }
 
-
+ 
     // Update is called once per frame
     void Update()
     {
+        if(validpos.Count != 0){
 tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
 
-    cg.SetInt("Size",size) ;    
 
-  Vector3 camrel = Camera.main.transform.position + new Vector3(50,50,50);
-  print(camrel);
+        positionBuffer.Dispose();
 
-    cg.SetFloats("Cameraposition",camrel.x,camrel.y,camrel.z) ;        
-   cg.SetBuffer(0,"Result",texpix);
-   cg.SetBuffer(0,"ResultFinal",final);
-      cg.SetBuffer(0,"PositionsFinal",finalp);
-    cg.SetBuffer(0,"Meta",meta);
-  cg.Dispatch(0,size /10,size /10,size /10);
-
-     final.GetData(colors);
-
-     finalp.GetData(posar);
-  //may cause memory leak   texpix.Dispose();
- //  texture.SetPixels(colors);
- //  texture.Apply();  
-     
-        //     texture.SetPixels(colors);
-        // gamep.texture = texture;
-   game.GetComponent<MeshRenderer>().material.SetTexture("_GradientTex",null) ;
-
-
-
-
-
-   //RENDERER 
-
-  // Update starting position buffer
-        if (cachedInstanceCount != instanceCount || cachedSubMeshIndex != subMeshIndex)
-            UpdateBuffers();
-
-        // Pad input
-   //   if (Input.GetAxisRaw("Horizontal") != 0.0f)
-        //    instanceCount = (int)Mathf.Clamp(instanceCount + Input.GetAxis("Horizontal") * 40000, 1.0f, 5000000.0f);
-
-        // Render
-        Graphics.DrawMeshInstancedIndirect(instanceMesh, subMeshIndex, instanceMaterial, new Bounds(Vector3.zero, new Vector3(100.0f, 100.0f, 100.0f)), argsBuffer);
-   
+  positionBuffer = new ComputeBuffer(validpos.Count, sizeof(float) * 3);
   
- 
-    // Use this for initialization
-
- 
-    // Update is called once per frame
-
-  validpos.Clear();
-  validcolor.Clear();
-     for (int i = 0; i < size*size*size; i++) {
-      
-      //     Graphics.DrawMesh (wrapper.mesh, wrapper.location, Quaternion.identity, cubeMaterial, 0);
-   if(posar[i].z != 10000){
-// Graphics.DrawMesh (Cube, posar[i], Quaternion.identity, cubeMaterial, 0);
-    validpos.Add(posar[i]);
-    validcolor.Add(colors[i]);
-    }
-        }if(instanceCount -1000 < validcolor.Count){
-            instanceCount= validcolor.Count + 5000;
-        }
-      //  instanceCount = 30000;
-    //  print();
-       positionBuffer.SetData(validpos);
+     positionBuffer.SetData(validpos);
         instanceMaterial.SetBuffer("positionBuffer", positionBuffer);
+
+         colbuff.Dispose();
+   colbuff = new ComputeBuffer(validpos.Count, sizeof(float) * 4);
  colbuff.SetData(validcolor);
         instanceMaterial.SetBuffer("colors", colbuff);
 
-    
-  }
 
-      void OnGUI() {
-        GUI.Label(new Rect(265, 25, 200, 30), "Instance Count: " + instanceCount.ToString());
-        instanceCount = (int)GUI.HorizontalSlider(new Rect(25, 20, 200, 30), (float)instanceCount, 1.0f, 5000000.0f);
-    }
+
+ 
+
+    if(instanceCount -1000 < validcolor.Count){
+            instanceCount = validcolor.Count + 5000;
+        }
+
+        if (cachedInstanceCount != instanceCount || cachedSubMeshIndex != subMeshIndex)
+            UpdateBuffers();
+
+  
+        Graphics.DrawMeshInstancedIndirect(instanceMesh, subMeshIndex, instanceMaterial, new Bounds(Vector3.zero, new Vector3(100.0f, 100.0f, 100.0f)), argsBuffer);
+       instanceMaterial.SetBuffer("colors", colbuff);
+
+  
+        }
+
+
+}
+
+
+
+   
+  
+  
+
 
 
 
  void UpdateBuffers() {
-        // Ensure submesh index is in range
+//   print("bufup");
+ 
         if (instanceMesh != null)
             subMeshIndex = Mathf.Clamp(subMeshIndex, 0, instanceMesh.subMeshCount - 1);
 

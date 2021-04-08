@@ -1,11 +1,15 @@
 // Each #kernel tells which function to compile; you can have many kernels
 #pragma kernel CSMain
 
+  struct voxel{
+        float3 pos;
+        float4 color;
+    };
+
 // Create a RenderTexture with enableRandomWrite flag and set it
 // with cs.SetTexture
 RWStructuredBuffer<float4> Result;
-RWStructuredBuffer<float3> PositionsFinal;
-RWStructuredBuffer<float4> ResultFinal;
+RWStructuredBuffer<voxel> ResultFinal;
 RWStructuredBuffer<float4> Meta;
 int Size = 10;
 
@@ -100,7 +104,7 @@ void gravity(uint3 id)
 
 
 
-[numthreads(10,10,10)]
+[numthreads(8,8,8)]
 void CSMain (uint3 id : SV_DispatchThreadID)
 {
     float4 black = float4(0, 0, 0, 0);
@@ -136,20 +140,20 @@ if(Meta[pos(id)].x == 0.2f&& doiexist(id+float3(0,1,0))){
 }
 move(id,id +float3(0,-1,0));
 if(Meta[pos(id)].x == 0.2f&& doiexist(id+float3(0,1,0))){
-
-if( random(id)<0.25f)
+float r = random(id);
+if( r<0.25f)
 {
 move(id,id +float3(-1,0,0));
 }
-else if(random(id)<0.5f)
+else if(r<0.5f)
 {
 move(id,id +float3(1,0,0));
 }
-else if(random(id)<0.75f)
+else if(r<0.75f)
 {
 move(id,id +float3(0,0,1));
 }
-else if(random(id)<1.0f)
+else if(r<1.0f)
 {
 move(id,id +float3(0,0,-1));
 }
@@ -160,7 +164,7 @@ move(id,id +float3(0,0,-1));
 	
 
 //optimizer 
-ResultFinal[pos(id)] = black;
+ResultFinal[pos(id)].color = black;
 
 
 if(id.x ==20 &&id.z == 20 &&id.y == 20){
@@ -171,61 +175,61 @@ if(id.x ==20 &&id.z == 20 &&id.y == 20){
 
 if(!fourfcompare(Result[pos(id)],black))
 {
-//if(  fourfcompare(black,Result[pos(float3(id.x- Cameraposition.x,id.y,id.z- Cameraposition.z) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+//if(  fourfcompare(black,Result[pos(float3(id.x- Cameraposition.x,id.y,id.z- Cameraposition.z) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 
-if(  fourfcompare(black,Result[pos(id+ float3(-1,0,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(-1,0,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(0,-2,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,-2,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(0,0,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,0,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(0,0,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,0,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(0,1,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
-}
-
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
-}
-else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(0,1,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
 
-else if(  fourfcompare(black,Result[pos(id+ float3(1,0,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
-}
-
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
-}
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
 
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(1,0,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,-1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
-}
-
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
-}
-if(  fourfcompare(black,Result[pos(id+ float3(-1,1,1) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+else if(  fourfcompare(black,Result[pos(id+ float3(-1,0,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
 
-//else if(  fourfcompare(black,Result[pos(id+ float3(1,-1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
 
-//else if(  fourfcompare(black,Result[pos(id+ float3(-1,-1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+}
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+}
 
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+}
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,-1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+}
 
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+}
+if(  fourfcompare(black,Result[pos(id+ float3(-1,1,1) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+}
+
+//else if(  fourfcompare(black,Result[pos(id+ float3(1,-1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
+
+//else if(  fourfcompare(black,Result[pos(id+ float3(-1,-1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 
 
 
 
-if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)] = Result[pos(id)];
+
+
+if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)].color = Result[pos(id)];
 }
 
 
@@ -234,21 +238,31 @@ if(  fourfcompare(black,Result[pos(id+ float3(1,1,0) )]))  {ResultFinal[pos(id)]
      }
 if(id.x ==20 &&id.z == 20 &&id.y == 20){
     
-    ResultFinal[pos(Cameraposition)] = float4(0,1,0,1);  
+    ResultFinal[pos(Cameraposition)].color = float4(0,1,0,1);  
 }
 
 
 if(id.x==10 && id.z==10 && id.y==10  ){
    
-   ResultFinal[pos(id)] = float4(0,0,1,1);   
+   ResultFinal[pos(id)].color = float4(0,0,1,1);   
 }
 
 
 
-if(!fourfcompare(black,ResultFinal[pos(id)]) ){
-PositionsFinal[pos(id)] = id;
+if(!fourfcompare(black,ResultFinal[pos(id)].color) ){
+ResultFinal[pos(id)].pos = id;
 }else {
-   PositionsFinal[pos(id)] = float3(0,0,10000); 
+ //  ResultFinal[pos(id)].pos = float3(0,0,10000); 
+ //more optimization needed;
+ int fi =0;
+ for (int i = 0; i < 200-id.x; i++){
+       if(!fourfcompare(Result[pos(id+float3(i,0,0))],black)){
+           break;
+       }
+    }
+      ResultFinal[pos(id)].pos = float3(fi,0,1000); 
+
+     
 
 /*skipper 
   for (int i = 0; i < 100-id.x; i++)
