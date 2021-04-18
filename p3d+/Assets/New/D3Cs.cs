@@ -42,18 +42,36 @@ Vector3[] posar;
     private uint[] args = new uint[5] { 0, 0, 0, 0, 0 };
 public AsyncGPUReadbackRequest readbackRequest;
  public AsyncGPUReadbackRequest readbackRequestc;
+
      Color[] colors;
      Vector3 camrel;
-
+private Unity.Collections.NativeArray<D3Cs.voxel> curp;
+Thread thread1;
     struct voxel{
      public   Vector3 pos;
      public   Color color;
+    
+    }
+
+    void calculatevalid(){
+       for (int i = 0; i < curp.Length; i++) //10ms !
+      {
+   if(curp[i].pos.z != 1000){
+  validpos.Add(curp[i].pos);
+    validcolor.Add(curp[i].color);
+    }
+       else{
+ i += (int)curp[i].pos.x;
+ }
+ 
+if(i>curp.Length) break;
+        }
     }
  void RunMain(AsyncGPUReadbackRequest r){
 //print("suc");
+ 
 
-
-tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
+//mp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
 
 
 
@@ -70,46 +88,16 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
   validcolor.Clear();
 
  
-      var curp = r.GetData<voxel>();
+       curp = r.GetData<voxel>();
   //    print(curp.Length);
 
 
   readbackRequest = AsyncGPUReadback.Request(final,RunMain);
 
-   //Stopwatch stopWatch = new Stopwatch();
-  // stopWatch.Start();
-    
-     for (int i = 0; i < curp.Length; i++) //10ms !
-      {
-   if(curp[i].pos.z != 1000){
-  validpos.Add(curp[i].pos);
-    validcolor.Add(curp[i].color);
-    }
-       else{
- i += (int)curp[i].pos.x;
 
-
- }
- 
-if(i>curp.Length) break;
-        }
-
-    //    stopWatch.Stop();
-      //  print(stopWatch.ElapsedMilliseconds);
-        
-      
-
-        positionBuffer.Dispose();
-
-  positionBuffer = new ComputeBuffer(validpos.Count, sizeof(float) * 3);
-  
-     positionBuffer.SetData(validpos);
-        instanceMaterial.SetBuffer("positionBuffer", positionBuffer);
-
-         colbuff.Dispose();
-   colbuff = new ComputeBuffer(validpos.Count, sizeof(float) * 4);
- colbuff.SetData(validcolor);
-        instanceMaterial.SetBuffer("colors", colbuff);
+     thread1 = new Thread(calculatevalid);
+thread1.Start();
+   
 
  }
     void Start()
@@ -153,9 +141,14 @@ texpix.SetData(colors);
     // Update is called once per frame
     void Update()
     {
+        Stopwatch stopWatch = new Stopwatch();
+ stopWatch.Start();
         if(validpos.Count != 0){
 tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
 
+
+     if(!thread1.IsAlive){
+      
 
         positionBuffer.Dispose();
 
@@ -169,7 +162,7 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
  colbuff.SetData(validcolor);
         instanceMaterial.SetBuffer("colors", colbuff);
 
-
+     }
 
  
 
@@ -182,11 +175,13 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
 
   
         Graphics.DrawMeshInstancedIndirect(instanceMesh, subMeshIndex, instanceMaterial, new Bounds(Vector3.zero, new Vector3(100.0f, 100.0f, 100.0f)), argsBuffer);
-       instanceMaterial.SetBuffer("colors", colbuff);
+      // instanceMaterial.SetBuffer("colors", colbuff);
 
   
         }
-
+     stopWatch.Stop();
+       print(stopWatch.ElapsedMilliseconds);
+       
 
 }
 

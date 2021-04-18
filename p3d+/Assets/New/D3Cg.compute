@@ -35,7 +35,7 @@ float rgbsum(float3 a){
 }
 bool doiexist(float3 id)
 {
-    if (rgbsum(Result[pos(id)])>0.1f)
+    if (rgbsum((float3)Result[pos(id)])>0.1f)
     {
         return true;
     }
@@ -95,7 +95,7 @@ void gravity(uint3 id)
             }
 
 
-float3 depos(int i){
+float3 depos(uint i){
     float3 r;
     r.x= i % Size;
     r.y= i / Size;
@@ -233,12 +233,21 @@ ResultFinal[pos(id)].pos = id;
 int fi =0;
   
  for (int i = 0; i < 220; i++){
+   //  Meta[pos(id)].y = i;
        if(doiexist(id+depos(i))){
-fi =i; 
+        /*   while(Meta[pos(id)+i].y !=0){
+i+=Meta[pos(id)+i].y;
+
+           }*/
+fi =i;
            break;
        }
        if(i==199){
+          /*      while(Meta[pos(id)+i].y !=0){
+i+=Meta[pos(id)+i].y;
+           }*/
            fi =i; 
+
            
        }
     }
