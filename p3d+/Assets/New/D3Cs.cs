@@ -50,11 +50,20 @@ Thread thread1;
     struct voxel{
      public   Vector3 pos;
      public   Color color;
+
+ 
     
     }
+         List<voxel> voxelresult;
+ voxel[] debugarr = new voxel[100];
+int finishedrequessts;
+
+
+
+
 
     void calculatevalid(){
-       for (int i = 0; i < curp.Length; i++) //10ms !
+       for (int i = 0; i < curp.Length; i++) 
       {
    if(curp[i].pos.z != 1000){
   validpos.Add(curp[i].pos);
@@ -67,6 +76,29 @@ Thread thread1;
 if(i>curp.Length) break;
         }
     }
+    IEnumerator Bettergetdata(){
+              finishedrequessts =0;
+            //  print(voxelresult.Count);
+              voxelresult.Clear();
+      for (int i = 0; i < 1; )
+      {
+
+       var Request = AsyncGPUReadback.Request(final,40,40*i,Finishrequest);
+            i++;
+       yield return new WaitForSeconds(0.01f);
+     
+      }
+      yield return new WaitUntil(() => finishedrequessts >= 2);
+
+//Finishrequest();
+    }
+
+     void Finishrequest(AsyncGPUReadbackRequest r){
+
+finishedrequessts ++;
+voxelresult.AddRange(r.GetData<voxel>());
+     }
+
  void RunMain(AsyncGPUReadbackRequest r){
 //print("suc");
  
@@ -87,8 +119,9 @@ if(i>curp.Length) break;
   validpos.Clear();
   validcolor.Clear();
 
- 
+
        curp = r.GetData<voxel>();
+       Bettergetdata();
   //    print(curp.Length);
 
 
@@ -99,7 +132,7 @@ if(i>curp.Length) break;
 thread1.Start();
    
 
- }
+ }sdfsdfsd
     void Start()
     {
      //   print( sizeof(float)*7);
@@ -180,7 +213,7 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
   
         }
      stopWatch.Stop();
-       print(stopWatch.ElapsedMilliseconds);
+  //     print(stopWatch.ElapsedMilliseconds);
        
 
 }
