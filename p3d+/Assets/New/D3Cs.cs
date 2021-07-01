@@ -17,14 +17,7 @@ public class D3Cs : MonoBehaviour
    public ComputeBuffer texpix;
     public ComputeBuffer meta;
     public ComputeBuffer final;
-      public ComputeBuffer finalp;
           public ComputeBuffer colbuff;
-  public GameObject game;
-
-  public Material material;
-
-  public GameObject game2;
-
 public GameObject tmp;
 Vector3[] posar;
  List<Vector3> validpos = new List<Vector3>();
@@ -39,12 +32,11 @@ Vector3[] posar;
     private int cachedSubMeshIndex = -1;
     private ComputeBuffer positionBuffer;
     private ComputeBuffer argsBuffer;
-    private uint[] args = new uint[5] { 0, 0, 0, 0, 0 };
+  private uint[] args = new uint[5] { 0, 0, 0, 0, 0 };
 public AsyncGPUReadbackRequest readbackRequest;
- public AsyncGPUReadbackRequest readbackRequestc;
 
-     Color[] colors;
-     Vector3 camrel;
+  Color[] colors;
+Vector3 camrel;
 private Unity.Collections.NativeArray<D3Cs.voxel> curp;
 Thread thread1;
     struct voxel{
@@ -54,15 +46,14 @@ Thread thread1;
  
     
     }
-         List<voxel> voxelresult;
- voxel[] debugarr = new voxel[100];
+List<voxel> voxelresult = new List<voxel>{};
 int finishedrequessts;
-
-
+bool pendingrequest;
 
 
 
     void calculatevalid(){
+      //7 ms
        for (int i = 0; i < curp.Length; i++) 
       {
    if(curp[i].pos.z != 1000){
@@ -74,31 +65,45 @@ int finishedrequessts;
  }
  
 if(i>curp.Length) break;
+
         }
+        
+ 
     }
     IEnumerator Bettergetdata(){
               finishedrequessts =0;
-            //  print(voxelresult.Count);
-              voxelresult.Clear();
+              if(voxelresult != null){
+             //   print(voxelresult.Count);
+            
+            //  voxelresult.Clear();
+              }  
       for (int i = 0; i < 1; )
       {
-
-       var Request = AsyncGPUReadback.Request(final,40,40*i,Finishrequest);
+ // var Request = AsyncGPUReadback.Request(final,40,40,Finishrequest);
+     
             i++;
        yield return new WaitForSeconds(0.01f);
      
       }
-      yield return new WaitUntil(() => finishedrequessts >= 2);
+      if(!pendingrequest){
+        pendingrequest= true;
+     var Request = AsyncGPUReadback.Request(final,40,40,Finishrequest);
+    print("l97");
+      }
+    // yield return new WaitUntil(() => finishedrequessts >= 2);
 
 //Finishrequest();
     }
-
      void Finishrequest(AsyncGPUReadbackRequest r){
-
+//print("l100");
 finishedrequessts ++;
 voxelresult.AddRange(r.GetData<voxel>());
+//print(voxelresult.Count);
+pendingrequest = false;
      }
-
+     void test(AsyncGPUReadbackRequest r){
+       print( r.GetData<voxel>().Length);
+     }
  void RunMain(AsyncGPUReadbackRequest r){
 //print("suc");
  
@@ -121,20 +126,25 @@ voxelresult.AddRange(r.GetData<voxel>());
 
 
        curp = r.GetData<voxel>();
-       Bettergetdata();
+      StartCoroutine(Bettergetdata());
   //    print(curp.Length);
 
 
+            // extract
+   
+AsyncGPUReadback.Request(final,800000,1,test);
   readbackRequest = AsyncGPUReadback.Request(final,RunMain);
+  
 
 
      thread1 = new Thread(calculatevalid);
 thread1.Start();
-   
 
- }sdfsdfsd
+
+ }
     void Start()
     {
+      pendingrequest = false;
      //   print( sizeof(float)*7);
            colors = new Color[size * size * size];
   posar = new Vector3[size*size*size];
@@ -164,18 +174,18 @@ texpix.SetData(colors);
           cg.Dispatch(0,size /8,size /8,size /8);
           
  
+   Stopwatch stopWatch = new Stopwatch();
+    stopWatch.Start();
             // extract
           readbackRequest = AsyncGPUReadback.Request(final,RunMain);
-
-  
+print(stopWatch.ElapsedMilliseconds);
+   stopWatch.Stop();
     }
-
- 
     // Update is called once per frame
     void Update()
     {
-        Stopwatch stopWatch = new Stopwatch();
- stopWatch.Start();
+      
+
         if(validpos.Count != 0){
 tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToString();
 
@@ -212,21 +222,11 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
 
   
         }
-     stopWatch.Stop();
+    
   //     print(stopWatch.ElapsedMilliseconds);
        
 
 }
-
-
-
-   
-  
-  
-
-
-
-
  void UpdateBuffers() {
 //   print("bufup");
  
@@ -265,17 +265,5 @@ tmp.GetComponent<TextMeshProUGUI>().text = (1f / Time.unscaledDeltaTime).ToStrin
         cachedInstanceCount = instanceCount;
         cachedSubMeshIndex = subMeshIndex;
     }
-
-    void OnDisable() {
-        if (positionBuffer != null)
-            positionBuffer.Release();
-        positionBuffer = null;
-
-        if (argsBuffer != null)
-            argsBuffer.Release();
-        argsBuffer = null;
-    }
-
-
 
 }
